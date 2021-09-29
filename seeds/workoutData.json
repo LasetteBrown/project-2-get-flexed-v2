@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Bench Press",
+        "description": "",
+        "category_id": 5,
+        "user_id": 1
+    },
+    {
+        "title": "Leg Press",
+        "description": "",
+        "category_id": 6,
+        "user_id": 2
+    },
+    {
+        "title": "Dumbbell Curls",
+        "description": "",
+        "category_id": 2,
+        "user_id": 3
+    }
+]
