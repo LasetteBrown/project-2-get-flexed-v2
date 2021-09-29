@@ -1,0 +1,17 @@
+[
+    {
+        "comment": "Absolute killer",
+        "workout_id": "1",
+        "user_id": "2"
+    },
+    {
+        "comment": "Pretty easy tbh",
+        "workout_id": "2",
+        "user_id": "3"
+    },
+    {
+        "comment": "Wayyyy to hard",
+        "workout_id": "3",
+        "user_id": "1"
+    }
+]
