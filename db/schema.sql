@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS getflexed_db;
+CREATE DATABASE getflexed_db;
