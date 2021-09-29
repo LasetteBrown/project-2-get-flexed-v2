@@ -1,0 +1,91 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./fonts/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./fonts/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./fonts/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <title>Get Flexed</title>
+</head>
+
+<body>
+  <div class="hero-image" id="start-screen">
+    <a href="past-workouts.html">Saved Workouts</a>
+    <img id="title" src="./images/text-font.png">
+    <div class="hero-text">
+      <h1>Bringing inspiration and innovative fitness</h1>
+      <button class="button is-info button is-ghost" id="load-site-btn">Make it Happen</button>
+    </div>
+  </div>
+
+  <section class="hide" id="workout-screen">
+    <a href="past-workouts.html">Saved Workouts</a>
+    <div class="columns ">
+      <div class="column is-two-thirds">
+        <section class="hero is-success is-fullheight" id="column1">
+          <div class="hero-body">
+            <div class="container">
+              <h1 id="titleHeader">Take care of you everyday</h1>
+              <h2 id="subtitle">Get Flexed is a place where the hard part of getting started is done for you all you
+                have to do is put in the work. Discover new exercise routines focusing on areas you want to target. You
+                can now experience a Get Flexed- however, whenever, and wherever you want with the support of
+                encouraging motivational quotes to get you inspired!</h2>
+            </div>
+          </div>
+      </div>
+      <div class="hero is-fullheight">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div class=is-one-quarter>
+              <h3 class="title">Let's Make it Happen</h3>
+              <p for="category" class="subtitle has-text-white">Choose Your Workout:</p>
+              <div class="box">
+                <form id="gen-workout">
+                  <label>Over 100 Workouts</label>
+                  <div class="control ">
+                    <div class="select is-rounded is-link">
+                      <select name="category" id="workout-cat">
+                        <option value="10">Abs</option>
+                        <option value="8">Arms</option>
+                        <option value="12">Back</option>
+                        <option value="14">Calves</option>
+                        <option value="11">Chest</option>
+                        <option value="9">Legs</option>
+                        <option value="13">Shoulders</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="control">
+                    <button class="button is-info button is-ghost">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class='hide' id="request-el">
+    <div class="hero-image1" id="start-screen">
+      <a href="past-workouts.html">Saved Workouts</a>
+      <div class="column is-full" id="motivational-quote"></div>
+      <div class="columns is-gapless" id="workout-generated"></div>
+      <div class='column is-centered' id="button-div"></div>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
