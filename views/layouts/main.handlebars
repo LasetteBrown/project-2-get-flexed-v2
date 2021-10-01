@@ -24,8 +24,30 @@
 </head>
 
 <body>
-
+ <div class="">
+    <header class="">
+      <h1>
+        <span>Insert Get Flex Logo image</span>
+        <a href="">Get Flexed</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
     {{{ body }}}
 
+
+
+
+
+ {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
