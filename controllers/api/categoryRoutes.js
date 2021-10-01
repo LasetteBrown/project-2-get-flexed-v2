@@ -1,6 +1,4 @@
-// /api/categories
-// READ ALL categories
-// CREATE category
-// /api/categories/:id
-// READ category
+const router = require('express').Router();
+const {Workout, User, Comment, Category} = require('../../models')
 
+module.exports = router;

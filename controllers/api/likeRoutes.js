@@ -1,6 +1,4 @@
-// /api/likes
-// READ ALL likes
-// CREATE a like
-// /api/likes/:id
-// DELETE a like
+const router = require('express').Router();
+const {Workout, User, Comment, Category} = require('../../models')
 
+module.exports = router;

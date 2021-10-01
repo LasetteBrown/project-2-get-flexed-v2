@@ -25,8 +25,4 @@ router.post('/', async (req, res) => {
     }
 });
 
-// /api/workouts/:id
-// Get a single workout by ID
-// UPDATE a  workout
-// DELETE a workout
 module.exports = router;
