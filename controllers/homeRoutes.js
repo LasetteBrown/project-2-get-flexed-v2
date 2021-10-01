@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { like } = require('sequelize/types/lib/operators');
-const {User, Post, Comment, Workout, Like} = require('../models');
+const {User, Comment, Workout, Like, Category} = require('../models');
 const withAuth = require("../utils/auth");
 
 
@@ -83,3 +82,39 @@ router.get('/profile/likes', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Create a workout page
+router.get('/create', withAuth, (req, res) => {
+    res.render('create');
+});
+
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+        const workoutData = await Workout.findOne({where:{id: req.params.id}}, {include: User, Like, Comment})
+        if (!workoutData) {
+            res.status(404).json({message: "No workout data found"});
+            return;
+        }
+        const workout = workout.get({plain: true})
+        res.render('edit', {workout, loggedIn: req.session.loggedIn, userId: req.session.userId});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// Login page
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+// Signup page
+router.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
+// Catch for any none supported route
+router.get('*', (req, res) => {
+    res.render('error')
+});
+
+module.exports = router;
