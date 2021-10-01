@@ -14,20 +14,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/fonts/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/public/css/style.css"
     <title>Get Flexed</title>
 </head>
 
 <body>
- <div class="">
-    <header class="">
-      <h1>
-        <span>Insert Get Flex Logo image</span>
-        <a href="">Get Flexed</a>
-      </h1>
+     <header class="">
+      
       <nav>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
+        {{#if }}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
@@ -35,13 +32,16 @@
         {{/if}}
       </nav>
     </header>
+   
+
+   
     {{{ body }}}
 
 
 
 
 
- {{#if logged_in}}
+ {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
