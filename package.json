@@ -1,7 +1,7 @@
 {
   "name": "get-flexed-v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "<p align=\"center\">\r <a href=\"#description\">Description</a> |\r <a href=\"#technologies\">Technology</a> |\r <a href=\"#project demo\">Project Demo</a> |\r <a href=\"#contact\">Contact</a> |\r <a href=\"#license\">License</a>\r </p>\r <br>",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
