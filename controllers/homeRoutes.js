@@ -112,9 +112,4 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-// // Catch for any none supported route
-// router.get('*', (req, res) => {
-//     res.render('error')
-// });
-
 module.exports = router;
