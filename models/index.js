@@ -22,7 +22,7 @@ Workout.belongsTo(User, {
 });
 
 Category.hasMany(Workout, {
-  foreignKey: "workout_id",
+  foreignKey: "category_id",
 });
 
 Workout.belongsTo(Category, {
