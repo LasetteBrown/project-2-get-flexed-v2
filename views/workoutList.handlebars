@@ -1,2 +1,18 @@
-{{!-- All workouts displayed --}}
-{{!-- Used to show all within a category as well --}}
+{{! All workouts displayed }}
+{{! Used to show all within a category as well }}
+
+{{#each workouts as |workout|}}
+  <div>
+    <div>
+      <h2>
+        {{title}}
+      </h2>
+      <h4>{{category}}</h4>
+      <p>
+        {{description}}
+      </p>
+      <p>Added by: <a href="">{{user.name}}</a> on {{}}</p>
+    </div>
+  </div>
+
+{{/each}}
