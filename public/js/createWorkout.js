@@ -4,9 +4,11 @@ const createWorkout = async (event) => {
     const workout = {
         title: document.querySelector('#workout-title').value.trim(),
         description: document.querySelector('#workout-description').value.trim(),
-        category_id: document.querySelector('workout-cat').val(),
+        category_id: document.querySelector('#workout-cat').value,
         user_id: null
     };
+
+    console.log(workout);
 
     const addWorkout = await fetch('/api/workout', {
         method: 'POST',
