@@ -88,6 +88,7 @@ router.get('/create', withAuth, (req, res) => {
     res.render('create');
 });
 
+// Edit page for workouts
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const workoutData = await Workout.findOne({where:{id: req.params.id}}, {include: User, Like, Comment})
