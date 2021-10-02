@@ -7,22 +7,34 @@ html {
   overflow-x: hidden;
   color: white;
   width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/pullup.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+height: 100%;
 }
 
 .hide {
   display: none;
 }
 
+nav {
+  margin-top: 2vh;
+  margin-left: 70vw;
+}
+
 a {
   font-family: "Bitter", serif;
-  /* margin-left: 88%; */
+  
   color: white;
   font-size: 1rem;
   text-shadow: 0 0 5px #c2ccec, 0 0 10px #c2ccec, 0 0 20px #c2ccec,
     0 0 30px #c2ccec, 0 0 40px #c2ccec;
 }
 
-.hero-image {
+/* .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/pullup.jpg");
   background-position: center;
@@ -30,7 +42,7 @@ a {
   background-size: cover;
   position: relative;
   height: 100%;
-}
+} */
 
 .hero-image1 {
   background-position: center;
