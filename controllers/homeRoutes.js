@@ -13,12 +13,13 @@ router.get("/", (req, res) => {
 // Returns the workouts page of the website
 router.get("/workouts", async (req, res) => {
   try {
-    const workoutData = await Workout.findAll({ include: User });
+    const workoutData = await Workout.findAll({ include: [User, Category] });
     if (!workoutData) {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+
     res.render("workoutList", {
       workouts,
       loggedIn: req.session.loggedIn,
@@ -56,7 +57,7 @@ router.get("/workouts/:id", withAuth, async (req, res) => {
   try {
     const workoutData = await Workout.findOne({
       where: { id: req.params.id },
-      include: User,
+      include: [User, Category],
       });
     if (!workoutData) {
       res.status(404).json({ message: "No workout data found" });
@@ -75,14 +76,9 @@ router.get("/workouts/:id", withAuth, async (req, res) => {
     const workout = workoutData.get({ plain: true });
     const comments = commentData.map((comment) => comment.get({ plain: true }));
   
-    const categoryData = await Category.findOne({where: {id: workout.category_id}});
-
-    const category = categoryData.get({plaine: true});
-
     res.render("workout", {
       workout,
       comments,
-      category,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -91,8 +87,29 @@ router.get("/workouts/:id", withAuth, async (req, res) => {
   }
 });
 
-// Returns a profile page
+// Returns your profile page
 router.get("/profile", withAuth, async (req, res) => {
+  try {
+    const workoutData = await Workout.findAll({
+      where: { user_id: req.session.userId },
+    });
+    if (!workoutData) {
+      res.status(404).json({ message: "No workout data found" });
+      return;
+    }
+    const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+    res.render("profile", {
+      workouts,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Returns a specific profile page
+router.get("/profile/:id", withAuth, async (req, res) => {
   try {
     const workoutData = await Workout.findAll({
       where: { user_id: req.params.id },
