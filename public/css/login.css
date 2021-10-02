@@ -1,13 +1,7 @@
-body,
-html {
+.box-form {
   background-color: black;
-  height: 100%;
-  margin: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: white;
+  
 }
-
 .input, .textarea {
     box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
     max-width: 100%;
@@ -21,4 +15,12 @@ html {
 
 .is-half {
   padding: 2%;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
 }

@@ -7,8 +7,10 @@ html {
   overflow-x: hidden;
   color: white;
   width: 100vw;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/pullup.jpg"); */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../images/pullup.jpg");
+  url("../images/workout12.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -44,23 +46,7 @@ a {
   height: 100%;
 } */
 
-.hero-image1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-}
 
-.hero-image2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/men-sled.jfif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 100%;
-}
 
 .hero-text {
   text-align: center;
@@ -187,4 +173,9 @@ a {
   border-color: transparent;
   color: #fff;
   margin-right: 2%;
+}
+
+
+.testing {
+  background-color: blue;
 }
