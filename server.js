@@ -4,8 +4,9 @@ const session = require('express-session');
 const routes = require('./controllers')
 const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers')
+const helpers = require('./utils/helpers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const morgan = require('morgan')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,6 +32,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(morgan('tiny'))
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
