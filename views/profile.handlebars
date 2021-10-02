@@ -1,32 +1,19 @@
-{{!-- Profile page of user posted workouts --}}
+{{! Profile page of user posted workouts }}
+{{#each profiles as |profile|}}
+  <div>
+    <div>
+      <h2>
+        <a href="/profiles/{{id}}">{{name}}</a>
+      </h2>
+      <h4>My Workouts</h4>
+      <p>
+        {{workout.description}}
+      </p>
+      <p>Added by:
+        <a href="/profile/{{user.id}}">{{user.name}}</a>
+        on
+        {{format_date createdAt}}</p>
+    </div>
+  </div>
 
- <div class="hero is-fullheight">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <div class="column ">
-              <h3>Previous Workouts</h3>
-              <p for="category" class="subtitle has-text-white">Choose Your Workout:</p>
-              <div class="box">
-                <form id="gen-workout">
-                  <label>See Saved Workout</label>
-                  <div class="control">
-                    <div class="select is-rounded is-link ">
-                      <select name="category" id="workout-cat">
-                        <option value="10">Abs</option>
-                        <option value="8">Arms</option>
-                        <option value="12">Back</option>
-                        <option value="14">Calves</option>
-                        <option value="11">Chest</option>
-                        <option value="9">Legs</option>
-                        <option value="13">Shoulders</option>
-                      </select>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="control">
-                    <button class="button is-info button is-ghost">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+{{/each}}
