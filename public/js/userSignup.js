@@ -14,7 +14,7 @@ const createUser = async (event) => {
     });
 
     if (fetchUser.ok) {
-        location.replace('/')
+        location.replace('/workouts')
     } else {
         alert('Failed to create user')
     }

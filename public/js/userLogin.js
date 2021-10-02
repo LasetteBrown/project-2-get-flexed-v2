@@ -14,7 +14,7 @@ const loginForm = async (event) => {
         });
 
         if (login.ok) {
-            document.location.replace('/');
+            document.location.replace('/workouts');
         } else {
             alert('Email or password incorrect, please try again!')
         }
