@@ -1,5 +1,14 @@
 {{! All workouts displayed }}
 {{! Used to show all within a category as well }}
+<div class="button-bar">
+  <button onclick="window.location.replace(`category/1`)">Abs Workouts</button>
+  <button onclick="window.location.replace(`category/2`)">Arms Workouts</button>
+  <button onclick="window.location.replace(`category/3`)">Back Workouts</button>
+  <button onclick="window.location.replace(`category/4`)">Calves Workouts</button>
+  <button onclick="window.location.replace(`category/5`)">Chest Workouts</button>
+  <button onclick="window.location.replace(`category/6`)">Legs Workouts</button>
+  <button onclick="window.location.replace(`category/7`)">Shoulders Workouts</button>
+</div>
 
 {{#each workouts as |workout|}}
   <div>
@@ -19,3 +28,9 @@
   </div>
 
 {{/each}}
+
+<script>
+  ${.filter-button}.addEventListen(click, (event) => { console.log(event.target)
+  window.location.replace(`category/${}`) })
+
+</script>
