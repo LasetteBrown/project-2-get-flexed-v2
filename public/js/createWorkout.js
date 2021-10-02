@@ -8,8 +8,6 @@ const createWorkout = async (event) => {
         user_id: null
     };
 
-    console.log(workout);
-
     const addWorkout = await fetch('/api/workout', {
         method: 'POST',
         body: JSON.stringify(workout),
