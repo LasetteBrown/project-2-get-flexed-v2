@@ -1,5 +1,7 @@
 # <p align="center"> GIT Flex 2.O</p>
 
+"https://get-flexed.herokuapp.com/" 
+
 <p align="center">
 <a href="#description">Description</a> |
 <a href="#technologies">Technology</a> |
