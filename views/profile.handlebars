@@ -1,19 +1,18 @@
 {{! Profile page of user posted workouts }}
-{{#each profiles as |profile|}}
+<div>
   <div>
-    <div>
-      <h2>
-        <a href="/profiles/{{id}}">{{name}}</a>
-      </h2>
-      <h4>My Workouts</h4>
-      <p>
-        {{workout.description}}
-      </p>
-      <p>Added by:
-        <a href="/profile/{{user.id}}">{{user.name}}</a>
-        on
-        {{format_date createdAt}}</p>
-    </div>
-  </div>
+    <h2>{{user.name}}</h2>
 
-{{/each}}
+  </div>
+  <div>
+    <h4>My Workouts</h4>
+    {{#each workout as |userWorkout|}}
+      <div>
+        <p>{{title}}</p>
+        <p>Created on: {{format_date createdAt}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="/js/profile.js"></script>
