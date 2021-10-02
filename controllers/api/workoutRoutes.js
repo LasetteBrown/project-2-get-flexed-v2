@@ -33,6 +33,7 @@ router.post("/", async (req, res) => {
 // Updates a workout
 router.put("/:id", async (req, res) => {
   try {
+    req.body.user_id = req.session.userId
     const workoutData = await Workout.update(req.body, {
       where: { id: req.params.id },
     });
