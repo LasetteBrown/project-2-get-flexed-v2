@@ -33,15 +33,16 @@ router.get("/workouts", async (req, res) => {
 // Returns a page with workouts by category
 router.get("/category/:id", async (req, res) => {
   try {
-    const workoutData = await Workout.findAll(
-      { where: { category_id: req.params.id } },
-      { include: User }
-    );
+    const workoutData = await Workout.findAll({
+      where: { category_id: req.params.id },
+      include: User,
+    });
     if (!workoutData) {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+
     res.render("workoutList", {
       workouts,
       loggedIn: req.session.loggedIn,
