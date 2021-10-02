@@ -1,7 +1,5 @@
 <div class="hero-image" id="start-screen">
-  {{!-- <a href="#">Log in</a>
-  <a href="#">Sign Up</a> --}}
-  <img id="title" src="/assets/text-font.png" />
+  <img id="title" src="/images/text-font.png" />
   <div class="hero-text">
     <h1>Bringing inspiration and innovative fitness</h1>
     {{!-- <button class="button is-info button is-ghost" id="load-site-btn">Make it
@@ -10,40 +8,3 @@
 </div>
 
 
-
-
-
- <h1>
-        {{!-- <span>Insert Get Flex Logo image</span> --}}
-        <a href="/views/homepage.handlebars">Get Flexed</a>
-      </h1>
-     <div class="hero-image" id="start-screen">
-    
-    <img id="title" src="/assets/images/text-font.png">
-    {{!-- <div class="hero-text">
-      <h1>Bringing inspiration and innovative fitness</h1>
-    </div> --}}
-  </div>
-
-
-  {{#each  as | | }}
-<div class="">
-  <div class="">
-    <h2>
-      <a href="">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
-</div>
-{{/each}}

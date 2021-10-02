@@ -15,7 +15,7 @@ html {
 
 a {
   font-family: "Bitter", serif;
-  margin-left: 88%;
+  /* margin-left: 88%; */
   color: white;
   font-size: 1rem;
   text-shadow: 0 0 5px #c2ccec, 0 0 10px #c2ccec, 0 0 20px #c2ccec,

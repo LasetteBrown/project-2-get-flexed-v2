@@ -1,8 +1,10 @@
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Flexed</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter&display=swap" rel="stylesheet">
@@ -14,36 +16,36 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/fonts/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/login.css">
+     <script src="https://kit.fontawesome.com/4cb8335a00.js" crossorigin="anonymous"></script>    
+  </head>
+
+  <body>
+    <nav>
+      <!-- Conditionally render login or logout links -->
+      <a href="/homepage">Home</a>
+      <a href="/workout">Workouts</a>
+      {{#if loggedIn}}
+        <a href="/profile">Profile</a>
+        |
+        <button class="no-button" id="logout">Logout</button>
+      {{else}}
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+      {{/if}}
+    </nav>
+
+
+
+  <main>
+    {{{body}}}
+  </main>
+
+  
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
     
-    <link rel="stylesheet" href="/public/css/style.css"
-    <title>Get Flexed</title>
-</head>
-
-<body>
-     <header class="">
-      
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if }}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-   
-
-   
-    {{{ body }}}
-
-
-
-
-
- {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-
+  </body>
 </html>
