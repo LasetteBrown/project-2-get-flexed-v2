@@ -108,9 +108,18 @@ router.get("/profile", withAuth, async (req, res) => {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
+    const userData = await User.findOne({
+      where: { id: req.session.userId },
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No User data found" });
+      return;
+    }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+    const user = userData.get({ plain: true });
     res.render("profile", {
       workouts,
+      user,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
