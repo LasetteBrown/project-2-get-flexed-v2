@@ -15,6 +15,13 @@
 <div id="buttons">
   {{#if loggedIn}}
     <button class="btn btn-primary" id="comment-button">Add Comment</button>
+
+    {{#if postLiked}}
+      <button id="liked-button">Liked</button>
+    {{else}}
+      <button id="unliked-button">Unliked</button>
+    {{/if}}
+
   {{/if}}
 
   {{#if (if_equals workout.user.id userId)}}
@@ -53,4 +60,10 @@
 
 {{#if (if_equals workout.user.id userId)}}
   <script src="/js/updateDeleteWorkout.js"></script>
+{{/if}}
+
+{{#if postLiked}}
+  <script src='/js/unlikeWorkout.js'></script>
+{{else}}
+  <script src="/js/likeWorkout.js"></script>
 {{/if}}
