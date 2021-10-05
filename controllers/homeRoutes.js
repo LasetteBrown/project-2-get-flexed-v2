@@ -77,9 +77,18 @@ router.get("/workouts/:id", withAuth, async (req, res) => {
     const workout = workoutData.get({ plain: true });
     const comments = commentData.map((comment) => comment.get({ plain: true }));
 
+    const likeData = await Like.findAll({where:{workout_id: req.params.id}});
+    const likes = likeData.map((like) => like.get({ plain: true }));
+    let postLiked = false;
+    await likes.forEach((like) => {
+      if (like.user_id == req.session.userId) {
+        postLiked = true;
+      }
+    });
     res.render("workout", {
       workout,
       comments,
+      postLiked,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -131,6 +140,7 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       return;
     }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+
     res.render("profile", {
       workouts,
       loggedIn: req.session.loggedIn,
@@ -165,7 +175,10 @@ router.get("/profile/likes", withAuth, async (req, res) => {
 
 // Create a workout page
 router.get("/create", withAuth, (req, res) => {
-  res.render("create");
+  res.render("create", {
+    loggedIn: req.session.loggedIn,
+    userId: req.session.userId,
+  });
 });
 
 // Edit page for workouts
