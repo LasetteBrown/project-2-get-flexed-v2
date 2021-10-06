@@ -53,6 +53,7 @@
     <nav>
 
       <!-- Conditionally render login or logout links -->
+      
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>
       {{#if loggedIn}}
@@ -74,7 +75,7 @@
 
       <div class="modal">
         <div class="modal-background"></div>
-        <div class="modal-content">
+        <div class="modal-content-width">
           <h2>Failed to log out</h2>
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
@@ -85,6 +86,17 @@
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <!-- Any other Bulma elements you want -->
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
 
   </body>
 </html>
