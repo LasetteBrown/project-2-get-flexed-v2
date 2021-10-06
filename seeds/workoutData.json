@@ -18,27 +18,27 @@
         "user_id": 3
     },
     {
-        "title": "",
-        "description": "",
+        "title": "Russian Twists",
+        "description": "Twist side to side with a weight in your hands",
         "category_id": 1,
         "user_id": 1
     },
     {
-        "title": "Leg Press",
-        "description": "",
-        "category_id": 6,
+        "title": "Deadlift",
+        "description": "Lift a bar straight up using your legs and engaging the muscles in your back",
+        "category_id": 3,
         "user_id": 2
     },
     {
-        "title": "Dumbbell Curls",
-        "description": "",
-        "category_id": 2,
+        "title": "Calve Raises",
+        "description": "Balance weight onto front of foot, push off toes to lift heels up",
+        "category_id": 4,
         "user_id": 3
     },
     {
-        "title": "Dumbbell Curls",
-        "description": "",
-        "category_id": 2,
+        "title": "Pushups",
+        "description": "Just your basic pushups",
+        "category_id": 7,
         "user_id": 3
     }
 ]
