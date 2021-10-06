@@ -2,46 +2,63 @@
 {{! Used to show all within a category as well }}
 <section>
   <h1>Welcome to your workout feed</h1>
-<div class="button-bar">
-  <button class= "button is-dark" onclick="window.location.replace(`/category/1`)">Abs</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/2`)">Arms</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/3`)">Back</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/4`)">Calves</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/5`)">Chest</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/6`)">Legs</button>
-  <button class= "button is-dark" onclick="window.location.replace(`/category/7`)">Shoulders</button>
-</div>
-
-{{#each workouts as |workout|}}
-  <div class="card" id="workoutList">
-    <div class="card-content">
-      <div class="media-content">
-        <p class="title is-4">
-          <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-        </p>
-       
-      </div>
-      <h2>
-        
-      </h2>
-      <h4>{{category.name}}</h4>
-      <p>
-        {{description}}
-      </p>
-      <p>Added by:
-        <a href="/profile/{{user.id}}">{{user.name}}</a>
-        on
-        {{format_date createdAt}}</p>
-    </div>
+  <div class="button-bar">
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/1`)"
+    >Abs</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/2`)"
+    >Arms</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/3`)"
+    >Back</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/4`)"
+    >Calves</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/5`)"
+    >Chest</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/6`)"
+    >Legs</button>
+    <button
+      class="button is-dark"
+      onclick="window.location.replace(`/category/7`)"
+    >Shoulders</button>
   </div>
 
-{{/each}}
+  {{#each workouts as |workout|}}
+    <div class="card" id="workoutList">
+      <div class="card-content">
+        <div class="media-content">
+          <p class="title is-4">
+            <a id="workout" href="/workouts/{{id}}">{{title}}</a>
+          </p>
+
+        </div>
+        <h2>
+
+        </h2>
+        <h4>{{category.name}}</h4>
+        <p>
+          {{description}}
+        </p>
+        <p>Added by:
+          <a href="/profile/{{user.id}}">{{user.name}}</a>
+          on
+          {{format_date createdAt}}</p>
+      </div>
+    </div>
+
+  {{/each}}
 
 </section>
-
-
-
-
 
 <script>
   ${.filter-button}.addEventListen(click, (event) => { console.log(event.target)
