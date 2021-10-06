@@ -20,13 +20,6 @@
         placeholder="Share your awesome workout..."
       />
     </div>
-    <div class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <h2>Failed to create workout</h2>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
     <div class="field">
       <label class="label">Workout category</label>
       <div class="control">
@@ -47,6 +40,15 @@
       <button class="btn button is-dark" type="submit">Submit</button>
     </div>
   </form>
+</div>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head modal-card-foot">
+      <p class="modal-card-title">Failed to create workout!</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+  </div>
 </div>
 
 <script src="/js/createWorkout.js"></script>
