@@ -5,53 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get Flexed</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/fonts/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/fonts/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/fonts/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/style.css"> 
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/workoutlist.css">
-    <link rel="stylesheet" href="/css/create.css">
-     <script src="https://kit.fontawesome.com/4cb8335a00.js" crossorigin="anonymous"></script>    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/fonts/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/fonts/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/fonts/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/workoutlist.css" />
+    <link rel="stylesheet" href="/css/create.css" />
+    <script
+      src="https://kit.fontawesome.com/4cb8335a00.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <nav>
-      
+
       <!-- Conditionally render login or logout links -->
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>
       {{#if loggedIn}}
         <a href="/profile">Profile</a>
-        <a href='/create'>Create</a>
-        <a href='/likes'>My Likes</a>
-        <button class="no-button button is-small is-dark is-rounded" id="logout">Logout</button>
+        <a href="/create">Create</a>
+        <a href="/likes">My Likes</a>
+        <button
+          class="no-button button is-small is-dark is-rounded"
+          id="logout"
+        >Logout</button>
       {{else}}
-        <a class="button is-small is-dark is-rounded "  href="/login">Login</a>
+        <a class="button is-small is-dark is-rounded" href="/login">Login</a>
         <a class="button is-small is-light is-rounded" href="/login">SignUp</a>
       {{/if}}
     </nav>
 
+    <main>
+      {{{body}}}
 
-  <main>
-    {{{body}}}
-  </main>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <h2>Failed to log out</h2>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
 
-  
+    </main>
+
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
-    
-
 
   </body>
 </html>
-

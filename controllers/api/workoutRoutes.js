@@ -40,6 +40,12 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     req.body.user_id = req.session.userId
+    if (req.body.title == '') {
+      req.body.title = null
+    }
+    if (req.body.description == '') {
+      req.body.description = null
+    }
     const workoutData = await Workout.update(req.body, {
       where: { id: req.params.id },
     });
