@@ -1,20 +1,28 @@
 {{! All workouts displayed }}
 {{! Used to show all within a category as well }}
+<section>
+  <h1>Welcome to your workout feed</h1>
 <div class="button-bar">
-  <button onclick="window.location.replace(`category/1`)">Abs Workouts</button>
-  <button onclick="window.location.replace(`category/2`)">Arms Workouts</button>
-  <button onclick="window.location.replace(`category/3`)">Back Workouts</button>
-  <button onclick="window.location.replace(`category/4`)">Calves Workouts</button>
-  <button onclick="window.location.replace(`category/5`)">Chest Workouts</button>
-  <button onclick="window.location.replace(`category/6`)">Legs Workouts</button>
-  <button onclick="window.location.replace(`category/7`)">Shoulders Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/1`)">Abs Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/2`)">Arms Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/3`)">Back Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/4`)">Calves Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/5`)">Chest Workouts</button>
+  <button class= "button is-dark" onclick="window.location.replace(`category/6`)">Legs Workouts</button>
+  <button class= "button is-dark"  onclick="window.location.replace(`category/7`)">Shoulders Workouts</button>
 </div>
 
 {{#each workouts as |workout|}}
-  <div>
-    <div>
+  <div class="card" id="workoutList">
+    <div class="card-content">
+      <div class="media-content">
+        <p class="title is-4">
+          <a id="workout" href="/workouts/{{id}}">{{title}}</a>
+        </p>
+       
+      </div>
       <h2>
-        <a href="/workouts/{{id}}">{{title}}</a>
+        
       </h2>
       <h4>{{category.name}}</h4>
       <p>
@@ -28,6 +36,12 @@
   </div>
 
 {{/each}}
+
+</section>
+
+
+
+
 
 <script>
   ${.filter-button}.addEventListen(click, (event) => { console.log(event.target)
