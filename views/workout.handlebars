@@ -23,7 +23,6 @@
 </div>
 {{/each}}
 
-<<<<<<< HEAD
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
@@ -34,14 +33,6 @@
 
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
-
-<div id="buttons">
-  {{#if loggedIn}}
-    <button class="btn btn-primary" id="comment-button">Add Comment</button>
-=======
->>>>>>> 0944f669a7b04255cc56b647b3d21d7558f69e4d
-
-
 
 <div class='hide comment' id="form-page">
     <h2>Add your comment</h2>
@@ -63,9 +54,9 @@
     <button class="btn button is-small is-dark is-rounded" id="comment-button">Add Comment</button>
     
     {{#if postLiked}}
-      <button id="liked-button">Liked</button>
+      <button id="liked-button">💖</button>
     {{else}}
-      <button id="unliked-button">Unliked</button>
+      <button id="unliked-button">💥</button>
     {{/if}}
     
     {{/if}}
@@ -77,7 +68,6 @@
     
 </div>
 
-<<<<<<< HEAD
 <h2>Comments</h2>
 {{#each comments as |userComment|}}
   <div class="blog-post col-5">
@@ -111,8 +101,6 @@
       <button class="btn btn-primary" type="submit">Add</button>
     </div>
   </form>
-=======
->>>>>>> 0944f669a7b04255cc56b647b3d21d7558f69e4d
 </div>
 
 {{#if (if_equals workout.user.id userId)}}
