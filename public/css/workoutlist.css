@@ -92,3 +92,13 @@ border-radius: 5px;
     font-size: 2vw;
     color: white;
 }
+
+.fa-meh-rolling-eyes:before {
+    content: "\f5a5";
+    font-size: 1rem;
+}
+
+.fa-grin-wink:before {
+    content: "\f58c";
+    font-size: 1rem; 
+}
