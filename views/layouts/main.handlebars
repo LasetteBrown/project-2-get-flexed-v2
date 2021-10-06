@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/css/style.css"> 
     <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/workout.css">
+    <link rel="stylesheet" href="/css/workoutlist.css">
     <link rel="stylesheet" href="/css/create.css">
      <script src="https://kit.fontawesome.com/4cb8335a00.js" crossorigin="anonymous"></script>    
   </head>
 
   <body>
     <nav>
+      
       <!-- Conditionally render login or logout links -->
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>
@@ -32,13 +33,12 @@
         <a href="/profile">Profile</a>
         <a href='/create'>Create</a>
         <a href='/likes'>My Likes</a>
-        <button class="no-button" id="logout">Logout</button>
+        <button class="no-button button is-small is-dark is-rounded" id="logout">Logout</button>
       {{else}}
-        <a class="button is-small is-dark is-rounded "  href="/login">Member Login</a>
-        <a class="button is-small is-dark is-rounded" href="/login">Sign Up</a>
+        <a class="button is-small is-dark is-rounded "  href="/login">Login</a>
+        <a class="button is-small is-light is-rounded" href="/login">SignUp</a>
       {{/if}}
     </nav>
-
 
 
   <main>
@@ -50,6 +50,8 @@
       <script src="/js/logout.js"></script>
     {{/if}}
     
+
+
   </body>
 </html>
 
