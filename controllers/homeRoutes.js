@@ -164,9 +164,13 @@ router.get("/likes", withAuth, async (req, res) => {
       return;
     }
     const likes = likeData.map((like) => like.get({ plain: true }));
-    console.log(likes);
+    let workoutId = []
+    likes.forEach(element => workoutId.push(element.workout_id));
+    const workoutData = await Workout.findAll({where: {id: workoutId}, include: [Category, User]})
+    const workouts = workoutData.map((workout) => workout.get({plain:true}))
+    console.log(workouts);
     res.render("likedWorkouts", {
-      likes,
+      workouts,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
