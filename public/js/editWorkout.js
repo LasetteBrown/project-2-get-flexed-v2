@@ -32,6 +32,6 @@ document
     document.querySelector(".modal").classList.remove("is-active");
   });
 
-document.querySelector(".modal-close").addEventListener("click", function () {
+document.querySelector(".delete").addEventListener("click", function () {
   document.querySelector(".modal").classList.remove("is-active");
 });

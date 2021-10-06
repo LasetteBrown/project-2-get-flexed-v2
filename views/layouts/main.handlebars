@@ -72,15 +72,15 @@
 
     <main>
       {{{body}}}
-
       <div class="modal">
         <div class="modal-background"></div>
-        <div class="modal-content-width">
-          <h2>Failed to log out</h2>
+        <div class="modal-card">
+          <header class="modal-card-head modal-card-foot">
+            <p class="modal-card-title">Failed to log out</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
       </div>
-
     </main>
 
     {{#if loggedIn}}

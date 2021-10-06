@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="modal">
+{{! <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
     <h2>Are you sure you want to delete your workout?</h2>
@@ -21,35 +21,55 @@
   </div>
 
   <button class="modal-close is-large" aria-label="close"></button>
+</div> }}
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Are you sure you want to delete your workout?</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <footer class="modal-card-foot">
+      <button class="button is-rounded is-dark confirm-button">Yes, Delete it</button>
+      <button class="button is-rounded is-light cancel-delete-button">No! Go
+        back!</button>
+    </footer>
+  </div>
 </div>
 
-
-
-
-
-<div class='hide comment' id="form-page">
-    <h2>Add your comment</h2>
-    <form class="form comment-form">
-        <div class="form-group">
-            <label for="comment">Comment:</label>
-            <input class="form-input" type="text" id="comment-description" />
-        </div>
-        <div class="form-group">
-            <button class="btn button is-small is-dark is-rounded" type="submit">Add</button>
-        </div>
-    </form>
+<div class="hide comment" id="form-page">
+  <h2>Add your comment</h2>
+  <form class="form comment-form">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <input class="form-input" type="text" id="comment-description" />
+    </div>
+    <div class="form-group">
+      <button
+        class="btn button is-small is-dark is-rounded"
+        type="submit"
+      >Add</button>
+    </div>
+  </form>
 </div>
 
+<div id="buttons">
+  {{#if loggedIn}}
+    <button
+      class="btn button is-small is-dark is-rounded"
+      id="comment-button"
+    >Add Comment</button>
 
-
-<div id='buttons'>
-    {{#if loggedIn}}
-    <button class="btn button is-small is-dark is-rounded" id="comment-button">Add Comment</button>
-    
     {{#if postLiked}}
-      <button class="btn button is-small is-dark is-rounded fas fa-grin-wink" id="liked-button">💖</button>
+      <button
+        class="btn button is-small is-dark is-rounded fas fa-grin-wink"
+        id="liked-button"
+      >💖</button>
     {{else}}
-      <button class="btn button is-small is-dark is-rounded fas fa-meh-rolling-eyes" id="unliked-button">💥</button>
+      <button
+        class="btn button is-small is-dark is-rounded fas fa-meh-rolling-eyes"
+        id="unliked-button"
+      >💥</button>
     {{/if}}
 
   {{/if}}
@@ -64,7 +84,7 @@
 {{#each comments as |userComment|}}
   <div class="blog-post col-5">
     <div class="display-flex" id="blog-title">
-      <p>By: {{user.name}}</p>
+      <p>By:<a href="/profile/{{user.id}}">{{user.name}}</a> </p>
       <p>On: {{format_date createdAt}}</p>
     </div>
     <div id="blog-description">
@@ -75,15 +95,6 @@
 
 <div class="hide comment" id="form-page">
   <h2>Add your comment</h2>
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <h2>Failed to create new comment</h2>
-    </div>
-
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-
   <form class="form comment-form">
     <div class="form-group">
       <label for="comment">Comment:</label>
@@ -94,7 +105,15 @@
     </div>
   </form>
 </div>
-
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head modal-card-foot">
+      <p class="modal-card-title">Failed to create new comment!</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+  </div>
+</div>
 <script src="/js/commentWorkout.js"></script>
 
 {{#if (if_equals workout.user.id userId)}}
