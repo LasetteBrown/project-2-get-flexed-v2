@@ -77,9 +77,20 @@ router.get("/workouts/:id", withAuth, async (req, res) => {
     const workout = workoutData.get({ plain: true });
     const comments = commentData.map((comment) => comment.get({ plain: true }));
 
+    const likeData = await Like.findAll({
+      where: { workout_id: req.params.id },
+    });
+    const likes = likeData.map((like) => like.get({ plain: true }));
+    let postLiked = false;
+    await likes.forEach((like) => {
+      if (like.user_id == req.session.userId) {
+        postLiked = true;
+      }
+    });
     res.render("workout", {
       workout,
       comments,
+      postLiked,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -99,9 +110,18 @@ router.get("/profile", withAuth, async (req, res) => {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
+    const userData = await User.findOne({
+      where: { id: req.session.userId },
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No User data found" });
+      return;
+    }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+    const user = userData.get({ plain: true });
     res.render("profile", {
       workouts,
+      user,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -122,6 +142,7 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       return;
     }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+
     res.render("profile", {
       workouts,
       loggedIn: req.session.loggedIn,
@@ -132,20 +153,20 @@ router.get("/profile/:id", withAuth, async (req, res) => {
   }
 });
 
-// Returns a profile page
-router.get("/profile/likes", withAuth, async (req, res) => {
+// Returns a likes page with all workouts that a user has liked
+router.get("/likes", withAuth, async (req, res) => {
   try {
     const likeData = await Like.findAll({
-      where: { user_id: req.session.userId },
-      include: Category,
+      where: { user_id: req.session.userId }
     });
     if (!likeData) {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
-    const workouts = likeData.map((workout) => workout.get({ plain: true }));
-    res.render("profile", {
-      workouts,
+    const likes = likeData.map((like) => like.get({ plain: true }));
+    console.log(likes);
+    res.render("likedWorkouts", {
+      likes,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -156,7 +177,10 @@ router.get("/profile/likes", withAuth, async (req, res) => {
 
 // Create a workout page
 router.get("/create", withAuth, (req, res) => {
-  res.render("create");
+  res.render("create", {
+    loggedIn: req.session.loggedIn,
+    userId: req.session.userId,
+  });
 });
 
 // Edit page for workouts

@@ -10,9 +10,6 @@
         <p>{{workout.description}}</p>
     </div>
 
-
-
-
 <h2 class="comments">Comments</h2>
 {{#each comments as |userComment|}}
 <div class="blog-post col-5">
@@ -47,6 +44,13 @@
 <div id='buttons'>
     {{#if loggedIn}}
     <button class="btn button is-small is-dark is-rounded" id="comment-button">Add Comment</button>
+    
+    {{#if postLiked}}
+      <button id="liked-button">Liked</button>
+    {{else}}
+      <button id="unliked-button">Unliked</button>
+    {{/if}}
+    
     {{/if}}
 
     {{#if (if_equals workout.user.id userId)}}
@@ -62,9 +66,12 @@
   <script src="/js/updateDeleteWorkout.js"></script>
 {{/if}}
 
+
 <script src='/js/commentWorkout.js'></script>
 
+{{#if postLiked}}
+  <script src='/js/unlikeWorkout.js'></script>
+{{else}}
+  <script src="/js/likeWorkout.js"></script>
+{{/if}}
 
-
-
-{{!-- PLAYING WITH BULMA --}}

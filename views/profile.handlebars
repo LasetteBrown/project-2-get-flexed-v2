@@ -6,9 +6,9 @@
   </div>
   <div>
     <h4>My Workouts</h4>
-    {{#each workout as |userWorkout|}}
+    {{#each workouts as |userWorkout|}}
       <div>
-        <p>{{title}}</p>
+        <a href="/workouts/{{id}}">{{title}}</a>
         <p>Created on: {{format_date createdAt}}</p>
       </div>
     {{/each}}

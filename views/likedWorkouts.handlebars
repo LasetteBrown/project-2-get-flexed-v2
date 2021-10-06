@@ -1,0 +1,19 @@
+<h2>Your Liked Workouts</h2>
+
+{{#each likes as |like|}}
+<div>
+    <div>
+      <h2>
+        <a href="/workouts/{{workout.id}}">{{workout.title}}</a>
+      </h2>
+      <h4>{{workout.category.name}}</h4>
+      <p>
+        {{workout.description}}
+      </p>
+      <p>Added by:
+        <a href="/profile/{{user.id}}">{{user.name}}</a>
+        on
+        {{format_date workout.createdAt}}</p>
+    </div>
+  </div>
+{{/each}}
