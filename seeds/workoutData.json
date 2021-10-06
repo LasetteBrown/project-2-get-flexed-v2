@@ -1,26 +1,26 @@
 [
     {
         "title": "Bench Press",
-        "description": "",
+        "description": "Place plates on a bar while laying flat on your back on the bench, push straight up with the weights",
         "category_id": 5,
         "user_id": 1
     },
     {
         "title": "Leg Press",
-        "description": "",
+        "description": "Using the leg press machine, place your back against the bottom, and press the plate with your legs ",
         "category_id": 6,
         "user_id": 2
     },
     {
         "title": "Dumbbell Curls",
-        "description": "",
+        "description": "With a douable weight keep your arms by yourside, and curl the weight towards your chest",
         "category_id": 2,
         "user_id": 3
     },
     {
-        "title": "Bench Press",
+        "title": "",
         "description": "",
-        "category_id": 5,
+        "category_id": 1,
         "user_id": 1
     },
     {
