@@ -142,9 +142,18 @@ router.get("/profile/:id", withAuth, async (req, res) => {
       return;
     }
     const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+    const userData = await User.findOne({
+      where: { id: req.params.id },
+    });
+    if (!userData) {
+      res.status(404).json({ message: "No User data found" });
+      return;
+    }
+    const user = userData.get({ plain: true });
 
     res.render("profile", {
       workouts,
+      user,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
@@ -157,16 +166,20 @@ router.get("/profile/:id", withAuth, async (req, res) => {
 router.get("/likes", withAuth, async (req, res) => {
   try {
     const likeData = await Like.findAll({
-      where: { user_id: req.session.userId }
+      where: { user_id: req.session.userId },
     });
     if (!likeData) {
       res.status(404).json({ message: "No workout data found" });
       return;
     }
     const likes = likeData.map((like) => like.get({ plain: true }));
-    console.log(likes);
+    let workoutId = []
+    likes.forEach(element => workoutId.push(element.workout_id));
+    const workoutData = await Workout.findAll({where: {id: workoutId}, include: [Category, User]})
+    const workouts = workoutData.map((workout) => workout.get({plain:true}))
+    console.log(workouts);
     res.render("likedWorkouts", {
-      likes,
+      workouts,
       loggedIn: req.session.loggedIn,
       userId: req.session.userId,
     });
