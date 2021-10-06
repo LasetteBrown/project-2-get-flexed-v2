@@ -12,6 +12,17 @@
   </div>
 </div>
 
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <h2>Are you sure you want to delete your workout?</h2>
+    <button class="confirm-button">Yes, Delete it</button>
+    <button class="cancel-delete-button">No! Go back!</button>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
 <div id="buttons">
   {{#if loggedIn}}
     <button class="btn btn-primary" id="comment-button">Add Comment</button>
@@ -45,6 +56,15 @@
 
 <div class="hide comment" id="form-page">
   <h2>Add your comment</h2>
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <h2>Failed to create new comment</h2>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
   <form class="form comment-form">
     <div class="form-group">
       <label for="comment">Comment:</label>
@@ -63,7 +83,7 @@
 {{/if}}
 
 {{#if postLiked}}
-  <script src='/js/unlikeWorkout.js'></script>
+  <script src="/js/unlikeWorkout.js"></script>
 {{else}}
   <script src="/js/likeWorkout.js"></script>
 {{/if}}
