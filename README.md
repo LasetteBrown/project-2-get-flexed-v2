@@ -1,6 +1,6 @@
 # <p align="center"> GIT Flex 2.O</p>
 
-"https://get-flexed.herokuapp.com/" 
+https://get-flexed.herokuapp.com/
 
 <p align="center">
 <a href="#description">Description</a> |
@@ -30,6 +30,11 @@
 ## **Project Demo** 
 This [demo video](https://drive.google.com/file/d/1ywm0i0hCYWGoOBOJTJFxC3uHiBi6s-XQ/view) will walk you through the application and its usage.
 ![alt text](https://github.com/SheylaPopovich/ebusiness-technology/blob/main/Assets/ebusiness-tech-demo.png)
+
+
+<p align="center">
+    <a href="https://get-flexed.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
+</p>
 
 <br>
 <br>
