@@ -23,14 +23,30 @@
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
-<div id="buttons">
-  {{#if loggedIn}}
-    <button class="btn btn-primary" id="comment-button">Add Comment</button>
 
+<div class='hide comment' id="form-page">
+    <h2>Add your comment</h2>
+    <form class="form comment-form">
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <input class="form-input" type="text" id="comment-description" />
+        </div>
+        <div class="form-group">
+            <button class="btn button is-small is-dark is-rounded" type="submit">Add</button>
+        </div>
+    </form>
+</div>
+
+
+
+<div id='buttons'>
+    {{#if loggedIn}}
+    <button class="btn button is-small is-dark is-rounded" id="comment-button">Add Comment</button>
+    
     {{#if postLiked}}
-      <button id="liked-button">Liked</button>
+      <button class="btn button is-small is-dark is-rounded fas fa-grin-wink" id="liked-button">💖</button>
     {{else}}
-      <button id="unliked-button">Unliked</button>
+      <button class="btn button is-small is-dark is-rounded fas fa-meh-rolling-eyes" id="unliked-button">💥</button>
     {{/if}}
 
   {{/if}}
