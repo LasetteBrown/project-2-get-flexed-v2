@@ -1,29 +1,17 @@
-<div class="card">
-    <div class="card-content">
-        <h3>{{workout.title}}</h3>
-        <p>By: {{workout.user.name}}     On: {{format_date workout.createdAt}}</p>
-        </p>
-    
-        <p>Category: {{workout.category.name}}</p>
-    </div>
-    <div>
-        <p>{{workout.description}}</p>
-    </div>
-
-<h2 class="comments">Comments</h2>
-{{#each comments as |userComment|}}
-<div class="blog-post col-5">
-    <div id='blog-description'>
-        <p class="comment-text">{{comment}}</p>
-    </div>
-    <div class="display-flex" id="blog-title">
-        <p>By: {{user.name}} On: {{format_date createdAt}}</p>
-    </div>
-    
+<div>
+  <div>
+    <h3>{{workout.title}}</h3>
+    <p>By: {{workout.user.name}}</p>
+    <p>On: {{format_date workout.createdAt}}</p>
+  </div>
+  <div>
+    <p>{{workout.category.name}}</p>
+  </div>
+  <div>
+    <p>{{workout.description}}</p>
+  </div>
 </div>
-{{/each}}
 
-<<<<<<< HEAD
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
@@ -38,46 +26,21 @@
 <div id="buttons">
   {{#if loggedIn}}
     <button class="btn btn-primary" id="comment-button">Add Comment</button>
-=======
->>>>>>> 0944f669a7b04255cc56b647b3d21d7558f69e4d
 
-
-
-<div class='hide comment' id="form-page">
-    <h2>Add your comment</h2>
-    <form class="form comment-form">
-        <div class="form-group">
-            <label for="comment">Comment:</label>
-            <input class="form-input" type="text" id="comment-description" />
-        </div>
-        <div class="form-group">
-            <button class="btn button is-small is-dark is-rounded" type="submit">Add</button>
-        </div>
-    </form>
-</div>
-
-
-
-<div id='buttons'>
-    {{#if loggedIn}}
-    <button class="btn button is-small is-dark is-rounded" id="comment-button">Add Comment</button>
-    
     {{#if postLiked}}
       <button id="liked-button">Liked</button>
     {{else}}
       <button id="unliked-button">Unliked</button>
     {{/if}}
-    
-    {{/if}}
 
-    {{#if (if_equals workout.user.id userId)}}
-    <button class="btn button is-small is-dark is-rounded" id="update-button">Update</button>
-    <button class="btn button is-small is-dark is-rounded" id="delete-button">Delete</button>
-    {{/if}}
-    
+  {{/if}}
+
+  {{#if (if_equals workout.user.id userId)}}
+    <button class="btn btn-primary" id="update-button">Update</button>
+    <button class="btn btn-primary" id="delete-button">Delete</button>
+  {{/if}}
 </div>
 
-<<<<<<< HEAD
 <h2>Comments</h2>
 {{#each comments as |userComment|}}
   <div class="blog-post col-5">
@@ -111,20 +74,16 @@
       <button class="btn btn-primary" type="submit">Add</button>
     </div>
   </form>
-=======
->>>>>>> 0944f669a7b04255cc56b647b3d21d7558f69e4d
 </div>
+
+<script src="/js/commentWorkout.js"></script>
 
 {{#if (if_equals workout.user.id userId)}}
   <script src="/js/updateDeleteWorkout.js"></script>
 {{/if}}
-
-
-<script src='/js/commentWorkout.js'></script>
 
 {{#if postLiked}}
   <script src="/js/unlikeWorkout.js"></script>
 {{else}}
   <script src="/js/likeWorkout.js"></script>
 {{/if}}
-
