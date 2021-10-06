@@ -2,7 +2,7 @@ const createWorkout = async (event) => {
   event.preventDefault();
 
   const workout = {
-    title: document.querySelector("#workout-title").value.trim(),
+    title: document.querySelector("#workout-title-value").value.trim(),
     description: document.querySelector("#workout-description").value.trim(),
     category_id: document.querySelector("#workout-cat").value,
     user_id: null,

@@ -41,7 +41,7 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="/css/workout.css" />
+    <link rel="stylesheet" href="/css/workoutlist.css" />
     <link rel="stylesheet" href="/css/create.css" />
     <script
       src="https://kit.fontawesome.com/4cb8335a00.js"
@@ -51,27 +51,32 @@
 
   <body>
     <nav>
+
       <!-- Conditionally render login or logout links -->
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>
       {{#if loggedIn}}
         <a href="/profile">Profile</a>
         <a href="/create">Create</a>
-        <button class="no-button" id="logout">Logout</button>
+        <a href="/likes">My Likes</a>
+        <button
+          class="no-button button is-small is-dark is-rounded"
+          id="logout"
+        >Logout</button>
       {{else}}
-        <a class="button is-small is-dark is-rounded" href="/login">Member Login</a>
-        <a class="button is-small is-dark is-rounded" href="/login">Sign Up</a>
+        <a class="button is-small is-dark is-rounded" href="/login">Login</a>
+        <a class="button is-small is-light is-rounded" href="/login">SignUp</a>
       {{/if}}
     </nav>
 
     <main>
       {{{body}}}
+
       <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
           <h2>Failed to log out</h2>
         </div>
-
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
 

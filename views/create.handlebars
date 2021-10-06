@@ -1,9 +1,15 @@
 <div id="form-page">
-  <h2>Share Your Workout</h2>
+  <h2 id="share-workout">Share Your Workout</h2>
+
   <form class="form create-form">
     <div class="form-group">
       <label for="workout-title">Workout Title:</label>
-      <input class="form-input" type="text" id="workout-title" placeholder="" />
+      <input
+        class="form-input"
+        type="text"
+        id="workout-title-value"
+        placeholder=""
+      />
     </div>
     <div class="form-group">
       <label for="workout-description">Post Work:</label>
@@ -21,22 +27,26 @@
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
-    <div class="control">
-      <div class="select is-rounded is-link">
-        <select name="category" id="workout-cat">
-          <option value="1">Abs</option>
-          <option value="2">Arms</option>
-          <option value="3">Back</option>
-          <option value="4">Calves</option>
-          <option value="5">Chest</option>
-          <option value="6">Legs</option>
-          <option value="7">Shoulders</option>
-        </select>
+    <div class="field">
+      <label class="label">Workout category</label>
+      <div class="control">
+        <div class="select is-rounded is-dark">
+          <select name="category" id="workout-cat">
+            <option value="1">Abs</option>
+            <option value="2">Arms</option>
+            <option value="3">Back</option>
+            <option value="4">Calves</option>
+            <option value="5">Chest</option>
+            <option value="6">Legs</option>
+            <option value="7">Shoulders</option>
+          </select>
+        </div>
       </div>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary" type="submit">Create</button>
+      <button class="btn button is-dark" type="submit">Submit</button>
     </div>
   </form>
 </div>
+
 <script src="/js/createWorkout.js"></script>
