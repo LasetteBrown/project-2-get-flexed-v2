@@ -1,28 +1,29 @@
 {{! All workouts displayed }}
 {{! Used to show all within a category as well }}
 <section>
-  <h1>Welcome to your workout feed</h1>
-  <div class="button-bar">
+  <h1 id="workoutlistHeader">Get Flexed with Us</h1>
+  <p id="welcome">Welcome to your Get Flexed workout feed. It's great to have you! Here is where you will find newly posted workouts to inspire and challenge you. Choose a category that best suits the workout you're searching for. Once in the category find the right workout for your experience and goals. </p>
+    <div class="button-bar">
     <button
-      class="button is-dark"
+      class="button is-dark fas fa-fire-alt"
       onclick="window.location.replace(`/category/1`)"
-    >Abs</button>
+    > Abs</button>
     <button
       class="button is-dark fas fa-dumbbell"
       onclick="window.location.replace(`/category/2`)"
     > Arms</button>
     <button
-      class="button is-dark"
+      class="button is-dark fas fa-stopwatch"
       onclick="window.location.replace(`/category/3`)"
-    >Back</button>
+    > Back</button>
     <button
       class="button is-dark fas fa-male"
       onclick="window.location.replace(`/category/4`)"
     > Calves</button>
     <button
-      class="button is-dark"
+      class="button is-dark fas fa-weight"
       onclick="window.location.replace(`/category/5`)"
-    >Chest</button>
+    > Chest</button>
     <button
       class="button is-dark fas fa-running"
       onclick="window.location.replace(`/category/6`)"
@@ -50,7 +51,7 @@
           {{description}}
         </p>
         <p>Added by:
-          <a href="/profile/{{user.id}}">{{user.name}}</a>
+          <a id="username" href="/profile/{{user.id}}">{{user.name}}</a>
           on
           {{format_date createdAt}}</p>
       </div>

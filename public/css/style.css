@@ -21,11 +21,12 @@ height: 100%;
 }
 
 nav {
-  margin-top: 2vh;
-  margin-left: 60vw;
+  text-align: end;
   word-spacing: 1rem;
   font-size: 2vw;
-
+  line-height:50px;
+  height:50px;
+  
 }
 
 a {
@@ -36,7 +37,6 @@ a {
     0 0 30px #c2ccec, 0 0 40px #c2ccec;
 }
 
-
 .hero-text {
   text-align: center;
   color: white;
@@ -46,14 +46,12 @@ a {
   font-weight: bolder;
 }
 
-
 #title {
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-top: 12vh;
 }
-
 
 #subtitle {
   font-family: "Bitter", serif;
@@ -95,7 +93,6 @@ a {
   color: #52bff2;
 }
 
-
 .column {
   padding: 0%;
 }
@@ -131,17 +128,54 @@ a {
   margin-right: 2%;
 }
 
-
 #footer {
   margin-top: 10vh;
  word-spacing: 1rem;
- 
 }
 
+#logo {
+ height: 4rem; 
+ float: left;
+ position: absolute;
+}
 
-/* .modal-content {
-  margin-top: 100px;
-      width: 450px;
-      display: block;
+#workout {
+  font-size: 1em;
+  color: white;
+  text-shadow: none;
+}
+
+#username {
+  font-size: 1em;
+  color: white;
+  text-shadow: none;
+}
+
+p {
+  font-size: 1em;
+}
+
+.media-content {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
+
+#form-page {
+  background-color: gray;
+  text-align: center;
+}
+
+#workout-post {
+  align-content: left;
+  text-align: left;
+}
+
+#favorites {
+  font-size: 4rem;
+  text-align: center;
+}
+
+/* img {
+  height: auto;
+  max-width: 50%;
 } */
-
