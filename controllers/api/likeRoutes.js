@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Workout, User, Comment, Category, Like } = require("../../models");
+const {Like } = require("../../models");
 
 // Creates a like
 router.post("/", async (req, res) => {
@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Deltes a like
+// Deletes a like
 router.delete("/:id", async (req, res) => {
   try {
     await Like.destroy({

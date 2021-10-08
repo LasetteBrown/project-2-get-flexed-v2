@@ -1,4 +1,5 @@
 const userLogout = async () => {
+  // Request to logout user, destroying the current session
   const logout = await fetch("/api/user/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -11,6 +12,7 @@ const userLogout = async () => {
   }
 };
 
+// Event listeners
 document.querySelector("#logout").addEventListener("click", userLogout);
 document
   .querySelector(".modal-background")
