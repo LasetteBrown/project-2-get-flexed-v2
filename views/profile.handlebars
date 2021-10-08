@@ -1,15 +1,19 @@
-{{! Profile page of user posted workouts }}
-<div class="columns">
-  <div class="column is-half">
-    <div id="userIcon" class="fas fa-user">
-      <h2 class="username" >{{user.name}}</h2>
-      <h4 id="subtitle">My Workouts</h4>
-      <img src="images/qrcode-get-flex.png">
-    </div>
-</div>
+<div class="card1">
+  <div>
+   <figure class="image is-128x128">
+  <img class="userPic" src="/images/profile-pic.jpg">
+</figure>
+  </div>
+  <div class="card-content">
     <div>
-      
-      <div >
+        <div class="media-content">
+        <p id="username" class="title is-4 fas fa-user">{{user.name}}</p>
+        <p>Below is a list of all your favorite workouts.</p>
+       
+      </div>
+    </div>
+
+     <div >
         {{#each workouts as |userWorkout|}}
           <div class="workoutInfo">
             <a id="workoutId" href="/workouts/{{id}}">{{title}}</a>
@@ -17,6 +21,8 @@
           </div>
         {{/each}}
       </div>
-    </div>
+  </div>
 </div>
+
+
 <script src="/js/profile.js"></script>
