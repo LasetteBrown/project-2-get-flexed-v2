@@ -1,3 +1,4 @@
+// Sends delele request to database with workoutID
 const deleteWorkout = async (event) => {
   const pathParams = window.location.pathname + window.location.search;
   const pathArry = pathParams.split("/");
@@ -14,6 +15,7 @@ const deleteWorkout = async (event) => {
   }
 };
 
+// Checks to make sure the user wants to delete the workout
 const confirmDelete = (event) => {
   document.querySelector(".modal").classList.add("is-active");
 
@@ -30,6 +32,7 @@ const confirmDelete = (event) => {
     });
 };
 
+// Sends user to the update page to update their workout
 const updateWorkout = (event) => {
   const pathParams = window.location.pathname + window.location.search;
   const pathArry = pathParams.split("/");
@@ -38,6 +41,7 @@ const updateWorkout = (event) => {
   location.replace(`/edit/${workoutId}`);
 };
 
+// Event listenetrs
 document
   .querySelector("#delete-button")
   .addEventListener("click", confirmDelete);

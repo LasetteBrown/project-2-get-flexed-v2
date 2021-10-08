@@ -1,3 +1,4 @@
+// Creating a user object and POSTing to the database
 const createUser = async (event) => {
   event.preventDefault();
 
@@ -13,6 +14,7 @@ const createUser = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
 
+  // Check to make sure it comes back as a 200
   if (fetchUser.ok) {
     location.replace("/workouts");
   } else {
@@ -20,6 +22,7 @@ const createUser = async (event) => {
   }
 };
 
+// Event listeners
 document.querySelector("#signup-form").addEventListener("submit", createUser);
 document
   .querySelector(".modal-background")

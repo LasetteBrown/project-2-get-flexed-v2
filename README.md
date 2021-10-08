@@ -52,7 +52,7 @@ This app was developed using the MVC model. It uses mySQL and Sequelize to creat
 </p>
 
 ## **Links** 
-This [demo video]( <!-- Add link to walkthrough video -->) will walk you through the application and its usage.
+This [Demo Video](<!-- Add link to walkthrough video -->) will walk you through the application and its usage.
 
 <p>
     <a href="https://get-flexed.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
