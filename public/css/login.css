@@ -1,17 +1,15 @@
 .box-form {
   background-color: black;
-  
-  
 }
-.input, .textarea {
-    box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
-    max-width: 100%;
-    width:min-content;
-  
+
+.input,
+.textarea {
+  box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+  max-width: 100%;
+  width: min-content;
 }
 .columns {
   margin-top: 20vh;
-
 }
 
 .is-half {
@@ -20,8 +18,29 @@
 
 #login {
   font-size: 2rem;
+  text-align: center;
 }
 
 #subtitle {
   font-size: 1rem;
+}
+
+.modal-card-title {
+  color: #363636;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.modal-card-foot,
+.modal-card-head {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
 }

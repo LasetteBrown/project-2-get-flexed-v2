@@ -11,22 +11,34 @@
      padding-left: 4%;
      padding-right: 4%;
      padding-bottom: 3%;
-     padding-top: 2%;
+     padding-top: 4%;
      background-color: rgb(0, 0, 0);
      color: white;
+     /* border-radius: 25px; */
 }
 
 .card-content {
     background-color: transparent;
+    
     padding: 0;
     padding-bottom: 7%;
-}
+    line-height: 2em;
+    }
 
-
-h1{
+h1 {
     text-align: center;
     margin-top: 4%;
+    color: #ffffffcb;
+    font-size: 2.5rem;
+}
+
+#welcome {
+    text-align: center;
     color: white;
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
 }
 
 .comments {
@@ -34,18 +46,17 @@ h1{
     border-bottom: solid;
     margin-bottom: 3%;
     color: white;
-    
 }
 
 .button-bar {
   margin: 1%;
   text-align: center;
+  word-spacing: 0.9rem;
 }
 
 h3 {
     font-size: 3rem;
     color: white;
-    
 }
 
 #buttons {
@@ -57,7 +68,6 @@ h3 {
     padding-bottom: 1%;
     border: solid rgba(2, 2, 2, 0.363) ;
     color: white;
-   
 }
 
 .display-flex {
@@ -73,10 +83,7 @@ padding: 2%;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
-    
 }
-
-
 
 #workout-description {
     border: 2px solid;
@@ -85,12 +92,11 @@ border-radius: 5px;
     height: 200px;
     resize: both;
     overflow: auto;
-   
 }
 
-#workout {
-    font-size: 2vw;
-    color: white;
+.control {
+    margin-left:  6%;
+    margin-right: 6%;
 }
 
 .fa-meh-rolling-eyes:before {
@@ -101,4 +107,67 @@ border-radius: 5px;
 .fa-grin-wink:before {
     content: "\f58c";
     font-size: 1rem; 
+}
+
+#userIcon:before {
+    font-size: 4rem;
+}
+
+.username {
+    font-size: 2.5rem;
+    margin-top: 2vh;
+}
+
+#subtitle {
+    font-size: 1rem;
+    margin-top: 1.5vh;
+    text-align: center;
+}
+
+#workoutId {
+    font-size: 1em;
+  color: white;
+   text-transform: uppercase;
+  transform: rotate(90deg);
+}
+
+.workoutInfo {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.form {
+    background-color: #363636; 
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+#share-workout{
+    margin-top: 4rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+    border-bottom: solid white;
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+
+.labels{
+    font-size: 1rem;
+}
+
+#postSubmitBtn {
+    margin-bottom: 3rem;
+}
+
+#workoutlistHeader {
+    font-family:Bitter, serif;
+    color: white;
+    font-weight: 500;
+}
+
+#userPost{
+
 }

@@ -20,19 +20,19 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./assets/fonts/apple-touch-icon.png"
+      href="/fonts/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/fonts/favicon-32x32.png"
+      href="/fonts/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/fonts/favicon-16x16.png"
+      href="/fonts/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
     <link
@@ -50,15 +50,19 @@
   </head>
 
   <body>
-    <nav>
+    <img id="logo" src="/images/Get-Flexed-logo-white.png" />
+    <nav class="navText">
+
+      <!-- Conditionally render login or logout links -->
+
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>
       {{#if loggedIn}}
         <a href="/profile">Profile</a>
         <a href="/create">Create</a>
-        <a href="/likes">MyLikes</a>
+        <a href="/likes">Favorites</a>
         <button
-          class="no-button button is-small is-dark is-rounded"
+          class="no-button button is-normal is-dark is-rounded"
           id="logout"
         >Logout</button>
       {{else}}
@@ -69,20 +73,28 @@
 
     <main>
       {{{body}}}
-
       <div class="modal">
         <div class="modal-background"></div>
-        <div class="modal-content">
-          <h2>Failed to log out</h2>
+        <div class="modal-card">
+          <header class="modal-card-head modal-card-foot">
+            <p class="modal-card-title">Failed to log out</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
       </div>
-
     </main>
 
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- Any other Bulma elements you want -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
 
   </body>
 </html>
