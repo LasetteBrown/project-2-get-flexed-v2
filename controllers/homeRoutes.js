@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   });
 });
 
-// Returns the workouts page of the website
+// Returns the workouts page of the website with all workouts displayed
 router.get("/workouts", async (req, res) => {
   try {
     const workoutData = await Workout.findAll({ include: [User, Category] });

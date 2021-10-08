@@ -1,10 +1,12 @@
 const editWorkout = async (event) => {
   event.preventDefault();
 
+  // Getting the workoutID from the params to be used as a workoutID
   const pathParams = window.location.pathname + window.location.search;
   const pathArry = pathParams.split("/");
   const workoutId = pathArry[2];
 
+  // Creating a workout object
   const workout = {
     title: document.querySelector("#workout-title").value.trim(),
     description: document.querySelector("#workout-description").value.trim(),
@@ -12,12 +14,14 @@ const editWorkout = async (event) => {
     user_id: null,
   };
 
+  // Fetch request to post the updated workout
   const updateFetch = await fetch(`/api/workout/${workoutId}`, {
     method: "PUT",
     body: JSON.stringify(workout),
     headers: { "Content-Type": "application/json" },
   });
 
+  // Check to make sure it comes back as a 200
   if (updateFetch.ok) {
     location.replace(`/workouts/${workoutId}`);
   } else {
@@ -25,6 +29,7 @@ const editWorkout = async (event) => {
   }
 };
 
+// Event listeners
 document.querySelector(".edit-form").addEventListener("submit", editWorkout);
 document
   .querySelector(".modal-background")
