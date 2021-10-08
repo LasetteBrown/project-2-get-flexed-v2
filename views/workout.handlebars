@@ -1,4 +1,4 @@
-<div>
+{{!-- <div>
   <div>
     <h3>{{workout.title}}</h3>
     <p>By: <a href="/profile/{{workout.user.id}}">{{workout.user.name}}</a> </p>
@@ -125,7 +125,7 @@
 {{else}}
   <script src="/js/likeWorkout.js"></script>
 {{/if}}
-
+ --}}
 
 
 {{!-- playing with bulma --}}
@@ -134,22 +134,124 @@
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-        <figure id="userPost" class="fas fa-user">
-          
-        </figure>
+       
       </div>
       <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
+        <p class="title is-4">{{workout.title}}</p>
+        <p>{{workout.category.name}}</p>
+        
+        <p>{{workout.description}}</p>
+        <p class="fas fa-user"> By: <a href="/profile/{{workout.user.id}}">{{workout.user.name}}</a> </p>
+        <p>On: {{format_date workout.createdAt}}</p>
+  </div>
       </div>
     </div>
 
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      <div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Are you sure you want to delete your workout?</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <footer class="modal-card-foot">
+      <button class="button is-rounded is-dark confirm-button">Yes, Delete it</button>
+      <button class="button is-rounded is-light cancel-delete-button">No! Go
+        back!</button>
+    </footer>
+  </div>
+</div>
+
+<div class="hide comment" id="addComment">
+  <h2>Add your comment</h2>
+  <form class="form comment-form">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <input class="form-input" type="text" id="comment-description" />
+    </div>
+    <div class="form-group">
+      <button
+        class="btn button is-small is-dark is-rounded"
+        type="submit"
+      >Add</button>
+    </div>
+  </form>
+</div>
+
+<div id="buttons">
+  {{#if loggedIn}}
+    <button
+      class="btn button is-small is-dark is-rounded"
+      id="comment-button"
+    >Add Comment</button>
+
+    {{#if postLiked}}
+      <button
+        class="btn button is-small is-dark is-rounded fas fa-grin-wink"
+        id="liked-button"
+      >💖</button>
+    {{else}}
+      <button
+        class="btn button is-small is-dark is-rounded fas fa-meh-rolling-eyes"
+        id="unliked-button"
+      >💥</button>
+    {{/if}}
+
+  {{/if}}
+
+  {{#if (if_equals workout.user.id userId)}}
+    <button class="btn btn-primary" id="update-button">Update</button>
+    <button class="btn btn-primary" id="delete-button">Delete</button>
+  {{/if}}
+</div>
+
+<h2>Comments</h2>
+{{#each comments as |userComment|}}
+  <div class="blog-post col-5">
+     <div id="blog-description">
+      <p>{{comment}}</p>
+    </div>
+    <div class="display-flex" id="blog-title">
+      <p>By:<a href="/profile/{{user.id}}">{{user.name}}</a> </p>
+      <p>On: {{format_date createdAt}}</p>
+    </div>
+   
+  </div>
+{{/each}}
+
+<div class="hide comment" id="form-page">
+  <h2>Add your comment</h2>
+  <form class="form comment-form">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <input class="form-input" type="text" id="comment-description" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Add</button>
+    </div>
+  </form>
+</div>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head modal-card-foot">
+      <p class="modal-card-title">Failed to create new comment!</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+  </div>
+</div>
+<script src="/js/commentWorkout.js"></script>
+
+{{#if (if_equals workout.user.id userId)}}
+  <script src="/js/updateDeleteWorkout.js"></script>
+{{/if}}
+
+{{#if postLiked}}
+  <script src="/js/unlikeWorkout.js"></script>
+{{else}}
+  <script src="/js/likeWorkout.js"></script>
+{{/if}}
     </div>
   </div>
 </div>
