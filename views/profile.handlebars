@@ -1,28 +1,23 @@
 <div class="card1">
-  <div>
-   <figure class="image is-128x128">
-  <img class="userPic" src="/images/profile-pic.jpg">
-</figure>
-  </div>
   <div class="card-content">
+    <img class="userPic" src="/images/user-pic.jpg" />
     <div>
-        <div class="media-content">
-        <p id="username" class="title is-4 fas fa-user">{{user.name}}</p>
-        <p>Below is a list of all your favorite workouts.</p>
-       
+      <div>
+        <p id="profilename" class="proName">{{user.name}}</p>
+        <p id="viewList">View list of workouts you posted</p>
+
       </div>
     </div>
 
-     <div >
-        {{#each workouts as |userWorkout|}}
-          <div class="workoutInfo">
-            <a id="workoutId" href="/workouts/{{id}}">{{title}}</a>
-            <p>Created on: {{format_date createdAt}}</p>
-          </div>
-        {{/each}}
-      </div>
+    <div>
+      {{#each workouts as |userWorkout|}}
+        <div class="workoutInfo">
+          <a id="workoutId" href="/workouts/{{id}}">{{title}}</a>
+          <p>Created on: {{format_date createdAt}}</p>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </div>
-
 
 <script src="/js/profile.js"></script>

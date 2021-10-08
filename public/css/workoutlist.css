@@ -10,20 +10,13 @@
     margin-top: 3%;
      padding-left: 4%;
      padding-right: 4%;
-     padding-bottom: 3%;
-     padding-top: 4%;
+    
+     padding-top: 3%;
      background-color: rgb(0, 0, 0);
      color: white;
      /* border-radius: 25px; */
 }
 
-.card-content {
-    background-color: transparent;
-    
-    padding: 0;
-    padding-bottom: 7%;
-    line-height: 2em;
-    }
 
 h1 {
     text-align: center;
@@ -36,8 +29,8 @@ h1 {
     text-align: center;
     color: white;
     font-size: 1rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 3%;
 }
 
@@ -74,6 +67,7 @@ h3 {
     text-align:end;
     padding-bottom: 2%;
     color: white;
+   
 }
 
 .comment-text {
@@ -133,7 +127,7 @@ border-radius: 5px;
 }
 
 .form {
-    background-color: #363636; 
+    background-color: #000000; 
     margin-left: 25%;
     margin-right: 25%;
     text-align: center;
@@ -146,7 +140,10 @@ border-radius: 5px;
     border-bottom: solid white;
     margin-left: 16%;
     margin-right: 16%;
-}
+    color:#363636;
+    font-weight: 600;
+    }
+
 
 
 .labels{
@@ -163,6 +160,7 @@ border-radius: 5px;
     font-weight: 500;
 }
 
-.userPic{
-  
+#blog-description {
+    background-color: #36363663;
+    padding-left: 1%;
 }

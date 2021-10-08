@@ -46,11 +46,11 @@
         <h2>
 
         </h2>
-        <h4>{{category.name}}</h4>
-        <p>
+        <h4> {{category.name}}</h4>
+        <p id="desc">
           {{description}}
         </p>
-        <p>Added by:
+        <p id="addBy" >Added by:
           <a id="username" href="/profile/{{user.id}}">{{user.name}}</a>
           on
           {{format_date createdAt}}</p>
