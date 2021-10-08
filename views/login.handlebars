@@ -9,7 +9,7 @@
         </header>
       </div>
     </div>
-    <h2 id="login">Welcome,</h2>
+    <h2 id="login">Welcome</h2>
     <h3 id="subtitle">Sign in to continue!</h3>
     <form id="login-form">
 
@@ -46,12 +46,20 @@
           </button>
         </p>
       </div>
+      <div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox">
+      I agree to the terms and conditions
+    </label>
+  </div>
+</div>
     </form>
   </div>
   <script src="/js/userLogin.js"></script>
 
   <div class="box-form is-half">
-    <h2 id="login">Create Account,</h2>
+    <h2 id="login">Create Account</h2>
     <h3 id="subtitle">Sign up to get started!</h3>
     <form id="signup-form">
 
@@ -102,6 +110,29 @@
         </p>
       </div>
     </form>
+  </div>
+</div>
+
+
+
+
+
+{{!-- testing modal  --}}
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
   </div>
 </div>
 

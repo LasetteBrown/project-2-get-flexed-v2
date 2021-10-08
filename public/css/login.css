@@ -1,6 +1,7 @@
 .box-form {
   background-color: black;
 }
+
 .input,
 .textarea {
   box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
@@ -17,11 +18,13 @@
 
 #login {
   font-size: 2rem;
+  text-align: center;
 }
 
 #subtitle {
   font-size: 1rem;
 }
+
 .modal-card-title {
   color: #363636;
   flex-grow: 1;
