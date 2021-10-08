@@ -1,7 +1,7 @@
 <h2 id="favorites">Favorites</h2>
 
 <div class="tile is-ancestor">
-  <div class="tile is-vertical is-8">
+  <div class="tile is-vertical">
     <div class="tile">
       <div class="tile is-parent is-vertical">
         {{#each workouts as |workout|}}
@@ -24,7 +24,10 @@
           </article>
         {{/each}}
       </div>
-      <div class="tile is-parent">
+    </div>
+  </div>
+</div>
+{{! <div class="tile is-parent">
         <article class="tile is-child notification is-light">
           <p class="title">Sled Push</p>
           <figure class="image is-4by3">
@@ -109,4 +112,4 @@
       </div>
     </article>
   </div>
-</div>
+</div> }}
