@@ -137,12 +137,13 @@
        
       </div>
       <div class="media-content">
-        <p class="title is-4">{{workout.title}}</p>
-        <p>{{workout.category.name}}</p>
+        <p class="title is-4">{{workout.title}} </p>
+        <p id="category">Category: {{workout.category.name}}</p>
         
-        <p>{{workout.description}}</p>
-        <p class="fas fa-user"> By: <a href="/profile/{{workout.user.id}}">{{workout.user.name}}</a> </p>
+        <p id="wd">{{workout.description}}</p>
+        <p id="profileUser" class="fas fa-user"> By: <a href="/profile/{{workout.user.id}}">{{workout.user.name}}</a> </p>
         <p>On: {{format_date workout.createdAt}}</p>
+        
   </div>
       </div>
     </div>
@@ -165,16 +166,16 @@
 
 <div class="hide comment" id="addComment">
   <h2>Add your comment</h2>
-  <form class="form comment-form">
+  <form class="form1 comment-form">
     <div class="form-group">
       <label for="comment">Comment:</label>
       <input class="form-input" type="text" id="comment-description" />
     </div>
     <div class="form-group">
-      <button
-        class="btn button is-small is-dark is-rounded"
+      <button id="addCom"
+        class="btn button is-small is-light is-rounded"
         type="submit"
-      >Add</button>
+      >Add New Comment</button>
     </div>
   </form>
 </div>
@@ -201,20 +202,20 @@
   {{/if}}
 
   {{#if (if_equals workout.user.id userId)}}
-    <button class="btn btn-primary" id="update-button">Update</button>
-    <button class="btn btn-primary" id="delete-button">Delete</button>
+    <button class="btn button is-small is-dark is-rounded" id="update-button">Update</button>
+    <button class="btn button is-small is-dark is-rounded" id="delete-button">Delete</button>
   {{/if}}
 </div>
 
-<h2>Comments</h2>
+<h2 id="comments">Comments</h2>
 {{#each comments as |userComment|}}
   <div class="blog-post col-5">
      <div id="blog-description">
       <p>{{comment}}</p>
     </div>
     <div class="display-flex" id="blog-title">
-      <p>By:<a href="/profile/{{user.id}}">{{user.name}}</a> </p>
-      <p>On: {{format_date createdAt}}</p>
+      <p>By:<a href="/profile/{{user.id}}"> {{user.name}}</a> 
+      On: {{format_date createdAt}}</p>
     </div>
    
   </div>

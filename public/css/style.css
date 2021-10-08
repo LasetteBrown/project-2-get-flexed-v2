@@ -140,24 +140,48 @@ a {
 }
 
 #workout {
-  font-size: 1em;
-  color: white;
-  text-shadow: none;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+ 
 }
+
 
 #username {
   font-size: 1em;
   color: white;
-  text-shadow: none;
+
 }
 
-p {
-  font-size: 1em;
+#profilename {
+  font-size: 2.5rem;
+  color: white;
+text-align: center;
 }
+
+.title.is-4 {
+  font-size: 2.3rem;
+  border-bottom: solid white;
+  color: #686868;
+  margin-right: 60%;
+  
+}
+
+#wd {
+font-size: 1.4rem;
+padding-top:2rem;
+padding-bottom: 2rem;
+}
+
+
+#viewList {
+  text-align: center;
+}
+
 
 .media-content {
-  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-y: hidden; 
   overflow-x: hidden;
+  
 }
 
 #form-page {
@@ -165,6 +189,10 @@ p {
   text-align: center;
 }
 
+#updateForm {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
 #workout-post {
   align-content: left;
   text-align: left;
@@ -173,5 +201,23 @@ p {
 #favorites {
   font-size: 4rem;
   text-align: center;
+}
+
+#comments {
+  font-size: 2.3rem;
+  color: #686868;
+  text-align: center;
+  border-bottom: solid white;
+  padding-top: 7%;
+}
+
+.form1 {
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+#addCom {
+  margin-top: 4%;
 }
 
