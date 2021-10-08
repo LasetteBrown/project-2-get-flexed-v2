@@ -1,65 +1,28 @@
 <h2 id="favorites">Favorites</h2>
 
-{{!-- {{#each workouts as |workout|}}
-<div>
-    <div>
-      <h2>
-        <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-      </h2>
-      <h4>{{category.name}}</h4>
-      <p>
-        {{description}}
-      </p>
-      <p>Added by:
-        <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-        on
-        {{format_date createdAt}}</p>
-    </div>
-  </div>
-{{/each}} --}}
-
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-dark">
-          {{#each workouts as |workout|}}
-            <div>
-              <div>
-                <h2>
-                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-                </h2>
-                <h4>{{category.name}}</h4>
-                <p>
-                  {{description}}
-                </p>
-                <p>Added by:
-                  <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-                  on
-                  {{format_date createdAt}}</p>
-              </div>
-            </div>
-          {{/each}}
-        </article>
-        <article class="tile is-child notification is-light">
-          {{#each workouts as |workout|}}
-            <div>
-              <div>
-                <h2>
-                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-                </h2>
-                <h4>{{category.name}}</h4>
-                <p>
-                  {{description}}
-                </p>
-                <p>Added by:
-                  <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-                  on
-                  {{format_date createdAt}}</p>
-              </div>
-            </div>
-          {{/each}}
-        </article>
+        {{#each workouts as |workout|}}
+          <article class="tile is-child notification is-dark">
+            <p class="title"><a
+                id="workout"
+                href="/workouts/{{id}}"
+              >{{title}}</a></p>
+            <br />
+            <p>{{description}}</p>
+            <br />
+            <h2><b>Work your {{category.name}}</b></h2>
+            <br />
+            <footer>
+              Added by:
+              <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
+              on
+              {{format_date createdAt}}
+            </footer>
+          </article>
+        {{/each}}
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-light">
@@ -90,10 +53,31 @@
     </div>
     <div class="tile is-parent">
       <article class="tile is-child notification is-dark">
-        <p class="title">Wide tile</p>
-        <p class="subtitle">Aligned with the right tile</p>
+        <p class="title">Bent Over Laterals</p>
+        <p class="subtitle">Work your Shoulders</p>
         <div class="content">
-          <!-- Content -->
+          <p>The bent over lateral raise directly hits the rear deltoids
+            (Shoulders). Considered an isolation exercise, it also exercises the
+            trapezius muscles, which are considered secondary muscles. This
+            exercise also hits the side deltoids as well.</p>
+          <br />
+          <ol>
+            <li>In a seated position with your feet firmly planted on the floor,
+              grasp two dumbbells with both hands.</li>
+            <li>Bend over until your body is roughly parallel to the ground or
+              slightly above. Your chest should almost be touching your thighs.</li>
+            <li>In a controlled fashion, raise the dumbbells with both hands
+              using your shoulders, out and away from the body. You should raise
+              the dumbbells to each side until they are parallel with the upper
+              back.</li>
+            <li>Pause for a moment and slowly lower the weight to the initial
+              position.</li>
+          </ol>
+          <h2><b>Shoulders</b></h2>
+          <br />
+          <footer>
+            Added by: Lasette on 10/7/2021
+          </footer>
         </div>
       </article>
     </div>
