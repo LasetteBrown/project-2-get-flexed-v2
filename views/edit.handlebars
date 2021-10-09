@@ -1,16 +1,18 @@
+
 {{#if (if_equals workout.user.id userId)}}
-<div class="card1" class="form ">
-  <h2 id="editPost">Edit your Post</h2>
+
   <form class="form edit-form">
-    <div class="form-group">
-      <label for="workout-title">Title:</label>
-      <input class="form-input" type="textr=" id="workout-title" value="{{workout.title}}"/>
-    </div>
-    <div class="form-group">
-      <label for="workout-description">Description:</label>
-      <input class="form-input" type="text" id="workout-description" value="{{workout.description}}"/>
-    </div>
-    <div class="control">
+     <h2 id="profilename">Edit your Post</h2>
+   <label class="labels" for="workout-title">Workout Title</label>
+ <div class="control">
+   <input class="form-input" type="textr=" id="workout-title" value="{{workout.title}}"/>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="labels">Workout Category</label>
+ <div class="control">
       <div class="select is-rounded is-link">
         <select name="category" id="workout-cat" workout.category.id>
           <option value="1" {{#if (if_equals workout.category.id 1)}}selected{{/if}}>Abs</option>
@@ -23,11 +25,22 @@
         </select>
       </div>
     </div>
+</div>  
+
+   
+    
+<div class="form-group">
+  <label for="workout-description" class="labels">Post Workout</label>
+  <div class="control">
+    <textarea class="textarea" id="workout-description" value="{{workout.description}}">{{workout.description}}</textarea>
+  </div>
+
+   
     <div class="form-group">
       <button id="editSubmit" class="btn button is-normal is-dark  is-rounded" type="submit">Update</button>
     </div>
   </form>
-</div>
+
 <div class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">

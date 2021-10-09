@@ -47,8 +47,7 @@
 
 
 .userPic {
- border-radius: 30%;
- padding-top: 4%;
+  border-radius: 50%;
 text-align: center;
 display: block;
 margin-left: auto;
@@ -62,6 +61,7 @@ max-width: 25%;
       margin-left: 30%;
       margin-right: 30%;
       margin-top: 3%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.411);
    
      
       background-color: rgb(0, 0, 0);
@@ -95,16 +95,6 @@ margin-right: 10%;
   font-size: 1.7rem;
 }
 
-#editPost {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding-top: 1rem;
-    font-size: 2rem;
-    border-bottom: solid white;
-    margin-left: 16%;
-    margin-right: 16%;
-    text-align: center;
-}
 
 .select {
   margin-top: 1rem;
@@ -118,3 +108,12 @@ margin-right: 10%;
 #editSubmit {
   margin-bottom: 2rem;
 }
+
+.tile {
+align-items: center;
+
+}
+
+
+
+

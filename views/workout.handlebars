@@ -1,11 +1,9 @@
-
 <div class="card">
  
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-       
-      </div>
+        </div>
       <div class="media-content">
         <p class="title is-4">{{workout.title}} </p>
         <p id="category">Category: {{workout.category.name}}</p>
@@ -43,9 +41,9 @@
     </div>
     <div class="form-group">
       <button id="addCom"
-        class="btn button is-small is-light is-rounded"
+        class="btn button is-small is-dark is-rounded"
         type="submit"
-      >Add New Comment</button>
+      >Post Comment</button>
     </div>
   </form>
 </div>
@@ -59,14 +57,14 @@
 
     {{#if postLiked}}
       <button
-        class="btn button is-small is-dark is-rounded fas fa-grin-wink"
+        class="btn button is-small is-dark is-rounded "
         id="liked-button"
-      >💖</button>
+      >💪😝</button>
     {{else}}
       <button
-        class="btn button is-small is-dark is-rounded fas fa-meh-rolling-eyes"
+        class="btn button is-small is-dark is-rounded "
         id="unliked-button"
-      >💥</button>
+      >👎😒</button>
     {{/if}}
 
   {{/if}}
@@ -81,7 +79,7 @@
 {{#each comments as |userComment|}}
   <div class="blog-post col-5">
      <div id="blog-description">
-      <p>{{comment}}</p>
+      <p>💬 {{comment}}</p>
     </div>
     <div class="display-flex" id="blog-title">
       <p>By:<a href="/profile/{{user.id}}"> {{user.name}}</a> 
