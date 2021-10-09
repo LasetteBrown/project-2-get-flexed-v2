@@ -1,128 +1,28 @@
-<h2 id="favorites">Favorites</h2>
+<div id="favorites">
+<h2 class="fas fa-fire" id="favorites"> My Favorites List</h2>
 
-{{!-- {{#each workouts as |workout|}}
-<div>
-    <div>
-      <h2>
-        <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-      </h2>
-      <h4>{{category.name}}</h4>
-      <p>
-        {{description}}
-      </p>
-      <p>Added by:
-        <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-        on
-        {{format_date createdAt}}</p>
-    </div>
-  </div>
-{{/each}} --}}
-
-<div class="tile is-ancestor">
-  <div class="tile is-vertical is-8">
-    <div class="tile">
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-dark">
-          {{#each workouts as |workout|}}
-            <div>
-              <div>
-                <h2>
-                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-                </h2>
-                <h4>{{category.name}}</h4>
-                <p>
-                  {{description}}
-                </p>
-                <p>Added by:
-                  <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-                  on
-                  {{format_date createdAt}}</p>
-              </div>
-            </div>
-          {{/each}}
-        </article>
-        <article class="tile is-child notification is-light">
-          {{#each workouts as |workout|}}
-            <div>
-              <div>
-                <h2>
-                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-                </h2>
-                <h4>{{category.name}}</h4>
-                <p>
-                  {{description}}
-                </p>
-                <p>Added by:
-                  <a id="workout" href="/profile/{{user.id}}">{{user.name}}</a>
-                  on
-                  {{format_date createdAt}}</p>
-              </div>
-            </div>
-          {{/each}}
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-light">
-          <p class="title">Sled Push</p>
-          <figure class="image is-4by3">
-            <img src="images/men-sled.jpg" />
-          </figure>
-          <br />
-          <p>The sled push (aka prowler press) is a functional full-body
-            exercise that targets your quads, glutes, hip flexors, calves,
-            hamstrings, core, triceps, chest, and shoulders. Depending on your
-            goals, you can push the sled with minimal weight for a longer
-            duration or stack on the resistance and push for a shorter distance.</p>
-          <br />
-          <h2><b>Sled Push to Plank</b></h2>
-          <p>How to: Load a sled up with an adequate amount of weight Staying
-            low and in a good athletic position (chest up, back flat, core
-            engaged), push the sled as fast as you can for 30 seconds
-            Immediately drop down to the ground and hold a Front Plank (never
-            hit your knees) for 45 seconds That’s 1 round Repeat that sequence
-            for 5 rounds</p>
-          <br />
-          <footer>
-            Added by: Nik on 10/5/2021
-          </footer>
-        </article>
-      </div>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-dark">
-        <p class="title">Wide tile</p>
-        <p class="subtitle">Aligned with the right tile</p>
-        <div class="content">
-          <!-- Content -->
-        </div>
-      </article>
-    </div>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child notification is-dark">
-      <div class="content">
-        <p class="title">Dead Lifts</p>
-        <div class="content">
-          <p>Deadlifting is a fairly basic movement, but it’s one that poses
-            lots of risk to your back if done incorrectly. Here’s a step-by-step
-            guide on how to deadlift. With the barbell on the floor, stand with
-            your feet shoulder width apart and your toes just under the bar.
-            Bend at the legs and keep your back in a straight line. Grip the bar
-            with either an overhand grip (palms facing back towards your body)
-            or a mixed grip (one hand over, one hand facing out.) Keep your head
-            up and your back straight as you drive through your legs, with your
-            chest pointing up. Fully extend your legs and pull the bar up. It
-            should rise near your shins and pass over your knees as you
-            straighten your legs and press your hips forward. You should end up
-            standing straight with the barbell held at waist height. Again, make
-            sure to keep your back straight. Place the bar back down by bending
-            your legs and keeping your back straight, taking care to keep your
-            head up.</p>
-          <figure class="image is-3by5">
-            <img src="images/woman-weights.jpg" />
-          </figure>
-        </div>
-      </div>
-    </article>
-  </div>
 </div>
+<p id="favList">Listed below are your top workouts</p>
+{{#each workouts as |workout|}}
+<div class="card" id="workoutList">
+     <div class="card-content">
+       <div class="media-content">
+              <p class="title is-4">
+                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
+                </p>
+                </div>
+
+                <h4>{{category.name}}</h4>
+                <p id="desc">
+                  {{description}}
+                </p>
+                <p id="addBy">Added by:
+                  <a id="username"  href="/profile/{{user.id}}">{{user.name}}</a>
+                  on
+                  {{format_date createdAt}}</p>
+              </div>
+          </div>
+          {{/each}}
+
+
+
