@@ -1,3 +1,4 @@
+// Posts to the database so it can check the password against the stored password to autheticate the user
 const loginForm = async (event) => {
   event.preventDefault();
 
@@ -21,6 +22,7 @@ const loginForm = async (event) => {
   }
 };
 
+// Event listeners
 document.querySelector("#login-form").addEventListener("submit", loginForm);
 document
   .querySelector(".modal-background")
