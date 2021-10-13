@@ -1,28 +1,24 @@
 <div id="favorites">
-<h2 class="fas fa-fire" id="favorites"> My Favorites List</h2>
-
+  <h2 class="fas fa-fire" id="favorites"> My Favorites List</h2>
 </div>
 <p id="favList">Listed below are your top workouts</p>
 {{#each workouts as |workout|}}
-<div class="card" id="workoutList">
-     <div class="card-content">
-       <div class="media-content">
-              <p class="title is-4">
-                  <a id="workout" href="/workouts/{{id}}">{{title}}</a>
-                </p>
-                </div>
+  <div class="card" id="workoutList">
+    <div class="card-content">
+      <div class="media-content">
+        <p class="title is-4">
+          <a id="workout" href="/workouts/{{id}}">{{title}}</a>
+        </p>
+      </div>
 
-                <h4>{{category.name}}</h4>
-                <p id="desc">
-                  {{description}}
-                </p>
-                <p id="addBy">Added by:
-                  <a id="username"  href="/profile/{{user.id}}">{{user.name}}</a>
-                  on
-                  {{format_date createdAt}}</p>
-              </div>
-          </div>
-          {{/each}}
-
-
-
+      <h4>{{category.name}}</h4>
+      <p id="desc">
+        {{description}}
+      </p>
+      <p id="addBy">Added by:
+        <a id="username" href="/profile/{{user.id}}">{{user.name}}</a>
+        on
+        {{format_date createdAt}}</p>
+    </div>
+  </div>
+{{/each}}

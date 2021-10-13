@@ -1,46 +1,53 @@
 <form class="form create-form">
- 
-<div class="field ">
-  <h2 id="share-workout">Share Your Workout</h2>
-  <label class="labels" for="workout-title">Workout Title</label>
-  <div class="control">
-    <input class="input"  id="workout-title-value" type="text" placeholder="Text input">
-  </div>
-</div>
 
-
-<div class="field">
-  <label class="labels">Workout Category</label>
-  <div class="control">
-    <div class="select is-rounded is-dark">
-      <select name="category" id="workout-cat">
-       <option value="1">Abs</option>
-            <option value="2">Arms</option>
-            <option value="3">Back</option>
-            <option value="4">Calves</option>
-            <option value="5">Chest</option>
-            <option value="6">Legs</option>
-            <option value="7">Shoulders</option>
-      </select>
+  <div class="field">
+    <h2 id="share-workout">Share Your Workout</h2>
+    <label class="labels" for="workout-title">Workout Title</label>
+    <div class="control">
+      <input
+        class="input"
+        id="workout-title-value"
+        type="text"
+        placeholder="Text input"
+      />
     </div>
   </div>
-</div>
 
-<div class="field">
-  <label for="workout-description" class="labels">Post Workout</label>
-  <div class="control">
-    <textarea class="textarea" id="workout-description" placeholder="Textarea"></textarea>
+  <div class="field">
+    <label class="labels">Workout Category</label>
+    <div class="control">
+      <div class="select is-rounded is-dark">
+        <select name="category" id="workout-cat">
+          <option value="1">Abs</option>
+          <option value="2">Arms</option>
+          <option value="3">Back</option>
+          <option value="4">Calves</option>
+          <option value="5">Chest</option>
+          <option value="6">Legs</option>
+          <option value="7">Shoulders</option>
+        </select>
+      </div>
+    </div>
   </div>
-</div>
 
+  <div class="field">
+    <label for="workout-description" class="labels">Post Workout</label>
+    <div class="control">
+      <textarea
+        class="textarea"
+        id="workout-description"
+        placeholder="Textarea"
+      ></textarea>
+    </div>
+  </div>
 
-
-<div class="form-group">
- 
-    <button class="btn button is-normal is-dark  is-rounded" id="postSubmitBtn" type="submit">Submit</button>
-
-</div>
+  <div class="form-group">
+    <button
+      class="btn button is-normal is-dark is-rounded"
+      id="postSubmitBtn"
+      type="submit"
+    >Submit</button>
+  </div>
 </form>
-
 
 <script src="/js/createWorkout.js"></script>

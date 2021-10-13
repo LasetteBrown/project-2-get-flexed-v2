@@ -4,7 +4,7 @@ const showComment = async (event) => {
   commentForm.classList.remove("hide");
 };
 
-// Creates a comment and POST to the database 
+// Creates a comment and POST to the database
 const createComment = async (event) => {
   event.preventDefault();
   // Gets the last part of the URL to use as the workoutID

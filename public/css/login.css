@@ -1,6 +1,6 @@
 #box-form {
   background-color: black;
-  box-shadow : 0 0 15px rgb(255 255 255 / 41%);
+  box-shadow: 0 0 15px rgb(255 255 255 / 41%);
   margin-left: 30%;
   margin-right: 30%;
 }
@@ -48,43 +48,36 @@
   position: relative;
 }
 
-
 .userPic {
   border-radius: 50%;
-text-align: center;
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-max-width: 25%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 25%;
 }
 
 .card1 {
-      align-content: center;
-      margin-left: 30%;
-      margin-right: 30%;
-      margin-top: 3%;
+  align-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 3%;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.411);
-   
-     
-      background-color: rgb(0, 0, 0);
-      color: white;
-     
+
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 #addComment {
-  
   text-align: center;
-margin-left: 10%;
-margin-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
 
 #desc {
- padding: 2rem;
-
+  padding: 2rem;
 }
-
 
 #addBy {
   text-align: end;
@@ -97,7 +90,6 @@ margin-right: 10%;
 #media {
   font-size: 1.7rem;
 }
-
 
 .select {
   margin-top: 1rem;
@@ -113,10 +105,5 @@ margin-right: 10%;
 }
 
 .tile {
-align-items: center;
-
+  align-items: center;
 }
-
-
-
-
