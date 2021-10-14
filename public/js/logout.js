@@ -23,4 +23,3 @@ document
 document.querySelector(".delete").addEventListener("click", function () {
   document.querySelector(".modal").classList.remove("is-active");
 });
-

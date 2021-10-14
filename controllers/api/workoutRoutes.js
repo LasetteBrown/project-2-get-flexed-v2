@@ -22,12 +22,12 @@ router.get("/", async (req, res) => {
 // Create a workout
 router.post("/", async (req, res) => {
   try {
-    req.body.user_id = req.session.userId
-    if (req.body.title == '') {
-      req.body.title = null
+    req.body.user_id = req.session.userId;
+    if (req.body.title == "") {
+      req.body.title = null;
     }
-    if (req.body.description == '') {
-      req.body.description = null
+    if (req.body.description == "") {
+      req.body.description = null;
     }
     const workoutData = await Workout.create(req.body);
     res.status(200).json({ workoutData, message: "Workout created!" });
@@ -39,12 +39,12 @@ router.post("/", async (req, res) => {
 // Updates a workout
 router.put("/:id", async (req, res) => {
   try {
-    req.body.user_id = req.session.userId
-    if (req.body.title == '') {
-      req.body.title = null
+    req.body.user_id = req.session.userId;
+    if (req.body.title == "") {
+      req.body.title = null;
     }
-    if (req.body.description == '') {
-      req.body.description = null
+    if (req.body.description == "") {
+      req.body.description = null;
     }
     const workoutData = await Workout.update(req.body, {
       where: { id: req.params.id },

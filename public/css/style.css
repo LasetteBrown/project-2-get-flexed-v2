@@ -8,12 +8,12 @@ html {
   color: white;
   width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../images/workout12.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-height: 100%;
+    url("../images/workout12.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
 }
 
 .hide {
@@ -24,9 +24,8 @@ nav {
   text-align: end;
   word-spacing: 1rem;
   font-size: 2vw;
-  line-height:50px;
-  height:50px;
-  
+  line-height: 50px;
+  height: 50px;
 }
 
 a {
@@ -57,7 +56,6 @@ a {
   font-family: "Bitter", serif;
   line-height: 2;
   padding-top: 0%;
-  
 }
 
 .subtitle {
@@ -130,36 +128,33 @@ a {
 
 #footer {
   margin-top: 10vh;
- word-spacing: 1rem;
+  word-spacing: 1rem;
 }
 
 #logo {
- height: 4rem; 
- float: left;
- position: absolute;
+  height: 4rem;
+  float: left;
+  position: absolute;
 }
 
 #workout {
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
-  
 }
-
 
 #username {
   font-size: 1em;
   color: white;
-
 }
 
 #profilename {
   font-size: 2.5rem;
   color: white;
-text-align: center;
-border-bottom: solid white;
-margin-left: 18%;
-    margin-right: 18%;
-    margin-bottom: 2%;
+  text-align: center;
+  border-bottom: solid white;
+  margin-left: 18%;
+  margin-right: 18%;
+  margin-bottom: 2%;
 }
 
 .title.is-4 {
@@ -167,25 +162,21 @@ margin-left: 18%;
   border-bottom: solid white;
   color: #686868;
   margin-right: 60%;
-  
 }
 
 #wd {
-font-size: 1.4rem;
-padding-top:2rem;
-padding-bottom: 2rem;
+  font-size: 1.4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-
 
 #viewList {
   text-align: center;
 }
 
-
 .media-content {
-  overflow-y: hidden; 
+  overflow-y: hidden;
   overflow-x: hidden;
-  
 }
 
 #form-page {
@@ -204,15 +195,13 @@ padding-bottom: 2rem;
 
 #favorites {
   font-size: 4rem;
- text-align: center;
- margin-top: 3%
-  
+  text-align: center;
+  margin-top: 3%;
 }
 
 #favList {
   text-align: center;
 }
-
 
 #comments {
   font-size: 2.3rem;
@@ -227,10 +216,8 @@ padding-bottom: 2rem;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
- 
 }
 
 #addCom {
   margin-top: 4%;
 }
-

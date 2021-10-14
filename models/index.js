@@ -43,8 +43,8 @@ User.belongsToMany(Workout, {
 });
 
 Workout.belongsToMany(User, {
-    through: Like,
-    foreignKey: "workout_id"
-})
+  through: Like,
+  foreignKey: "workout_id",
+});
 
 module.exports = { User, Comment, Like, Workout, Category };

@@ -1,6 +1,5 @@
 <div class="card">
- 
-  <div class="card-content">
+   <div class="card-content">
     <div class="media">
       <div class="media-left">
         </div>
@@ -11,26 +10,25 @@
         <p id="wd">{{workout.description}}</p>
         <p id="profileUser" class="fas fa-user"> By: <a href="/profile/{{workout.user.id}}">{{workout.user.name}}</a> </p>
         <p>On: {{format_date workout.createdAt}}</p>
-        
+    </div>
   </div>
+ </div>
+
+  <div class="content">
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+        <p class="modal-card-title">Are you sure you want to delete your workout?</p>
+        <button class="delete" aria-label="close"></button>
+        </header>
+        <footer class="modal-card-foot">
+        <button class="button is-rounded is-dark confirm-button">Yes, Delete it</button>
+        <button class="button is-rounded is-light cancel-delete-button">No! Go
+        back!</button>
+        </footer>
       </div>
     </div>
-
-    <div class="content">
-      <div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Are you sure you want to delete your workout?</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <footer class="modal-card-foot">
-      <button class="button is-rounded is-dark confirm-button">Yes, Delete it</button>
-      <button class="button is-rounded is-light cancel-delete-button">No! Go
-        back!</button>
-    </footer>
-  </div>
-</div>
 
 <div class="hide comment" id="addComment">
   <h2>Add your comment</h2>
@@ -85,7 +83,6 @@
       <p>By:<a href="/profile/{{user.id}}"> {{user.name}}</a> 
       On: {{format_date createdAt}}</p>
     </div>
-   
   </div>
 {{/each}}
 
