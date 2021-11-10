@@ -5,7 +5,7 @@ const { Comment } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     // Sets the user id of the new comment equal to the sessions user id
-    req.body.user_id = req.session.userId;\
+    req.body.user_id = req.session.userId;
 
     // If the comment is an empty string set to null for a server error to occur
     if (req.body.comment == "") {
